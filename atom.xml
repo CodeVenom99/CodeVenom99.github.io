@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-20T07:39:53.482Z</updated>
+  <updated>2019-08-20T09:52:22.882Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装keil相关程序</title>
+    <link href="http://yoursite.com/2019/08/20/%E5%AE%89%E8%A3%85keil%E7%9B%B8%E5%85%B3%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://yoursite.com/2019/08/20/安装keil相关程序/</id>
+    <published>2019-08-20T09:11:45.000Z</published>
+    <updated>2019-08-20T09:52:22.882Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>win10 （家庭中文版）操作系统之下</strong></p><p>链接: <a href="https://pan.baidu.com/s/1VpSV5s_0LpdesD3DdXPSBQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1VpSV5s_0LpdesD3DdXPSBQ</a> 提取码: meva </p><p><strong>Keil5</strong></p><p>1.双击mdk514.exe，设置路径。安装路径为全英文，不要有空格</p><p>2.输入信息，随便填</p><p>3.跳出ulink，选择允许</p><p>4.安装成功后会弹出安装芯片包的界面，直接关掉，不用在线安装</p><p>5.双击    Keil.STM32F4xx_DFP.1.0.8    和    Keil.STM32F1xx_DFP.1.0.5    安装芯片包</p><p>6.检查，随便打开一个工程编译，编译成功即为安装成功</p><p><strong>keygen</strong><br>这个软件用于破解keil5<br>1）打开MDK（注意：WIN7以及以上系统，请点击MDK图标，右键-》以管理员权限打开）<br>2）点击MDK中菜单：File-&gt;License Management，调出注册管理界面<br>3）复制下面界面的CID</p><img src="/2019/08/20/安装keil相关程序/4.png" title="This is an image"><p>4）打开解压后的Keygen.exe,CID选项里面填入上一步复制的CID。其他选项按下图填写即可</p><img src="/2019/08/20/安装keil相关程序/3.png" title="This is an image"><p>5）最后点击：generate，生成License ID。<br>6）把生成的Licese ID添加到MDK中。如下图</p><img src="/2019/08/20/安装keil相关程序/2.png" title="This is an image"><p>7）添加成功。</p><p><strong>st-link：</strong><br>1.选择dpinst_amd64.exe安装，如果成功就ok，不成功第二步<br>2.卸载第一步安装后，安装dpinst_x86.exe即可<br>3.最后显示两个绿色的勾，及成功</p><img src="/2019/08/20/安装keil相关程序/1.png" title="This is an image"><p><strong>jlink</strong><br>1.双击Setup_JLink_V490.exe，一直点击next<br>2.最后勾选MDK即可</p><p><strong>CH341SER</strong><br>双击CH341SER.EXE，一直点击next，<br>显示“驱动预安装成功”即可，插上usb，再装驱动</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;win10 （家庭中文版）操作系统之下&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;链接: &lt;a href=&quot;https://pan.baidu.com/s/1VpSV5s_0LpdesD3DdXPSBQ&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>换了电脑如何使用hexo继续写博客</title>
