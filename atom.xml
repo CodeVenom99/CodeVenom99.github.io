@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Code Venom&#39;s Blog</title>
+  
+  <subtitle>在隆冬，我终于知道，我身上有一个不可战胜的夏天</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-08-14T05:20:19.074Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>徐胜</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/08/20/hello-world/"/>
+    <id>http://yoursite.com/2019/08/20/hello-world/</id>
+    <published>2019-08-20T05:00:56.490Z</published>
+    <updated>2019-08-14T05:20:19.074Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab画图</title>
+    <link href="http://yoursite.com/2019/08/18/Matlab%E7%94%BB%E5%9B%BE/"/>
+    <id>http://yoursite.com/2019/08/18/Matlab画图/</id>
+    <published>2019-08-18T09:03:36.000Z</published>
+    <updated>2019-08-18T10:35:07.436Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="annotation"><a href="#annotation" class="headerlink" title="annotation"></a><strong>annotation</strong></h4><p>annotation(‘arrow’,x,y)%建立从(x(1), y(1))到(x(2), y(2))的箭头注释对象。</p><p>如：</p><p>annotation(‘arrow’,[0.3 0.2],[0.5 0.45]);<br>表示在坐标（0.2，0.45）（0.3，0.5）加箭头，前面两个值是横坐标，后面两个值是纵坐标。</p><p><strong>注意：annotation对象的父对象是figure对象，上面提到的坐标x，y是标准化的坐标，即整个图形窗口（figure对象）左下角为(0,  0)，右上角为(1,  1)。宽度w和高度h也都是标准化的，其取值在[0,  1]之间。</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;annotation&quot;&gt;&lt;a href=&quot;#annotation&quot; class=&quot;headerlink&quot; title=&quot;annotation&quot;&gt;&lt;/a&gt;&lt;strong&gt;annotation&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;annotation(‘arrow’,x,
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Git分支和标标签</title>
+    <link href="http://yoursite.com/2019/08/17/Git%E5%88%86%E6%94%AF%E5%92%8C%E6%A0%87%E6%A0%87%E7%AD%BE/"/>
+    <id>http://yoursite.com/2019/08/17/Git分支和标标签/</id>
+    <published>2019-08-17T15:36:03.000Z</published>
+    <updated>2019-08-17T16:09:18.436Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h4><p>开发项目过程中，会有一个时间点需要发布多版本，就像windows会有家庭版，企业版一样，这些版本都是基于基础版本上开发的，在github上创建分支就有点像创建家庭版，企业版分支一样，可以帮助开发者单独开发各个版本，不让各分支相互影响。</p><p>创建名为    feature    的分支（可以为中文）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch feature</span><br></pre></td></tr></table></figure><p>切换分支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout feature</span><br></pre></td></tr></table></figure><p>上传分支</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin feature</span><br></pre></td></tr></table></figure><a id="more"></a><h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><p>标签与分支相互独立，互不影响</p><p>创建名为    v1.0    标签（可以为中文）</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.0</span><br></pre></td></tr></table></figure><p>共享标签（同步标签到远端）</p><figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin v1.0</span><br></pre></td></tr></table></figure><p><strong>共享的标签标记最近的一次项目提交</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;分支&quot;&gt;&lt;a href=&quot;#分支&quot; class=&quot;headerlink&quot; title=&quot;分支&quot;&gt;&lt;/a&gt;分支&lt;/h4&gt;&lt;p&gt;开发项目过程中，会有一个时间点需要发布多版本，就像windows会有家庭版，企业版一样，这些版本都是基于基础版本上开发的，在github上创建分支就有点像创建家庭版，企业版分支一样，可以帮助开发者单独开发各个版本，不让各分支相互影响。&lt;/p&gt;
+&lt;p&gt;创建名为    feature    的分支（可以为中文）&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git branch feature&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;切换分支&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git checkout feature&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;上传分支&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git push origin feature&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>上传本地代码到Github</title>
+    <link href="http://yoursite.com/2019/08/15/%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%A0%81%E5%88%B0Github/"/>
+    <id>http://yoursite.com/2019/08/15/上传本地代码到Github/</id>
+    <published>2019-08-15T11:23:07.000Z</published>
+    <updated>2019-08-17T16:04:52.812Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="上传新代码"><a href="#上传新代码" class="headerlink" title="上传新代码"></a>上传新代码</h4><p><strong>1.在Github上创建仓库，仓库下需要README.md文件</strong></p><p><strong>2.在要上传的文件夹下右击，选择Git Bush Here</strong></p><p><strong>3.创建 .git文件</strong></p><p>输入        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure><a id="more"></a><p>4.查看当前文件状态，红色表示没有上传到中间站的本地文件**</p><p>输入        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure><img src="/2019/08/15/上传本地代码到Github/1.png" title="This is an image"><p><strong>5.关联需要上传的仓库地址</strong></p><p>输入        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin +仓库地址</span><br><span class="line">`</span><br></pre></td></tr></table></figure><img src="/2019/08/15/上传本地代码到Github/2.png" title="This is an image"><p><strong>6.下载README.md文件</strong></p><p>输入        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure><p><strong>7.上传所有文件到中转站</strong></p><p>输入        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br></pre></td></tr></table></figure><p><strong>8.查看当前文件状态，绿色表示没有上传到远端的中转站文件</strong></p><p>输入    </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure><img src="/2019/08/15/上传本地代码到Github/3.png" title="This is an image"><p><strong>9.给本次上传添加注释</strong></p><p>输入        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;添加注释&quot;</span><br></pre></td></tr></table></figure><img src="/2019/08/15/上传本地代码到Github/5.png" title="This is an image"><p><strong>10.上传至远端</strong></p><p>输入        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure><img src="/2019/08/15/上传本地代码到Github/4.png" title="This is an image"><h4 id="上传修改代码"><a href="#上传修改代码" class="headerlink" title="上传修改代码"></a>上传修改代码</h4><p><strong>1.查看当前文件状态，红色表示没有上传到中间站的本地文件</strong></p><p>输入        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure><p><strong>2.上传所有文件到中转站</strong></p><p>输入        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add --all</span><br></pre></td></tr></table></figure><p><strong>3.查看当前文件状态，绿色表示没有上传到远端的中转站文件</strong></p><p>输入    </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure><p><strong>4.给本次上传添加注释</strong></p><p>输入        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;添加注释&quot;</span><br></pre></td></tr></table></figure><p><strong>5.上传至远端</strong></p><p>输入        </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;上传新代码&quot;&gt;&lt;a href=&quot;#上传新代码&quot; class=&quot;headerlink&quot; title=&quot;上传新代码&quot;&gt;&lt;/a&gt;上传新代码&lt;/h4&gt;&lt;p&gt;&lt;strong&gt;1.在Github上创建仓库，仓库下需要README.md文件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.在要上传的文件夹下右击，选择Git Bush Here&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3.创建 .git文件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;输入        &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;git init&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="Github" scheme="http://yoursite.com/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搭建博客遇到的问题</title>
+    <link href="http://yoursite.com/2019/08/14/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://yoursite.com/2019/08/14/搭建博客遇到的问题/</id>
+    <published>2019-08-14T09:50:16.000Z</published>
+    <updated>2019-08-15T12:18:36.252Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>安装好Node和Git后</strong></p><p>随便找个地方建立文件夹，进入文件后右击选择Bash Here，不要使用cmd</p><p><strong>初试化Git</strong></p><p>git config –global user.name ‘CodeVenom99’</p><p>git config –global user.email ‘1060401004@qq.com’</p><h5 id="config-yml可以使用Sublime-Text-3来编辑（冒号后需要空格）"><a href="#config-yml可以使用Sublime-Text-3来编辑（冒号后需要空格）" class="headerlink" title="_config.yml可以使用Sublime Text 3来编辑（冒号后需要空格）"></a><strong>_config.yml可以使用Sublime Text 3来编辑（冒号后需要空格）</strong></h5><p>deploy:<br>  type: git<br>  repo:填入自己的http<br>  branch: master</p><a id="more"></a><p><strong>hexo s 建立本地博客 localhost:4000</strong></p><p>不输入hexo s无法访问本地博客 </p><p>ctrl+c断开与本地博客的连接</p><p><strong>若出现Spawm failed</strong></p><p>可以在_config.yml下的repo填写http地址而不是ssh</p><p><strong>yilia左边导航栏里的所有文章需要如下配置</strong></p><img src="/2019/08/14/搭建博客遇到的问题/imag.jpg" title="This is an image"><p>1,node在6.0以上，最好装v10.15.3</p><p>2，需要安装  cnpm install hexo-generator-json-content –save </p><p>3,在博客根目录下的_config.yml的最后添加（不要动格式！！！）</p><p>jsonContent:<br>  meta: false<br>  pages: false<br>  posts:<br>    title: true<br>    date: true<br>    path: true<br>    text: false<br>    raw: false<br>    content: false<br>    slug: false<br>    updated: false<br>    comments: false<br>    link: false<br>    permalink: false<br>    excerpt: false<br>    categories: false<br>    tags: true</p><p><strong>hexo d    显示成功，但是刷不出页面</strong></p><p>远端博客需要一段时间来反应（看具体情况，有快有慢）</p><p>选个好一点的网络</p><p><strong>在输入hexo d之后有ERROR Deployer not found：git</strong></p><p>换好一点的网络或者热点</p><p>重装cnpm install hexo-generator-json-content –save</p><p><strong>yilia想改下aboutme里面的介绍：</strong></p><p>以下是我所用到的HTML的标签（不是学这个的，一开始还试了\r\n，哈哈😄）</p><p>“&lt;br&gt;”代表换行</p><p>&amp;nbsp ; 代表空格，输入的时候分号后面还需要一个空格</p><p><strong>编辑玩博文之后hexo g出现大量警告</strong></p><p>检查博文的tags：，冒号后面必须有一个<strong><em>空格</em></strong></p><img src="/2019/08/14/搭建博客遇到的问题/1.png" title="This is an image"><img src="/2019/08/14/搭建博客遇到的问题/2.png" title="This is an image"><img src="/2019/08/14/搭建博客遇到的问题/3.png" title="This is an image"><p><strong>显示图片</strong></p><p>更改博客根目录下的_config.yml，post_asset_folder: true。之后创建的文章在 _posts文件夹下会创建与其名字相同的文件夹，可以将本篇文章需要用到的图片放置在该文件下，在Typora使用下面语句来调用</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img imag.jpg This is an image %&#125;</span><br></pre></td></tr></table></figure><p>img.jpg改为图片的名字</p><p><strong>文章如何显示摘要</strong></p><p>点击主页时，发现所有文章都是全文显示，不利于查找，可控制显示的字数</p><p>在你 MD 格式文章正文插入  &lt;!– more –&gt;  即可，只会显示它之前的，此后的就不显示，点击文章标题，全文阅读才可看到，同时在themes/yilia/_config.yml下注释掉         # excerpt_link: more </p><p><strong>核心命令</strong></p><p>hexo clean        清空缓存</p><p>hexo g                生成hexo</p><p>hexo s                生成本地博客 ，可以去localhost:4000，看情况</p><p>hexo d                发布到远端</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;安装好Node和Git后&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;随便找个地方建立文件夹，进入文件后右击选择Bash Here，不要使用cmd&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;初试化Git&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;git config –global user.name ‘CodeVenom99’&lt;/p&gt;
+&lt;p&gt;git config –global user.email ‘1060401004@qq.com’&lt;/p&gt;
+&lt;h5 id=&quot;config-yml可以使用Sublime-Text-3来编辑（冒号后需要空格）&quot;&gt;&lt;a href=&quot;#config-yml可以使用Sublime-Text-3来编辑（冒号后需要空格）&quot; class=&quot;headerlink&quot; title=&quot;_config.yml可以使用Sublime Text 3来编辑（冒号后需要空格）&quot;&gt;&lt;/a&gt;&lt;strong&gt;_config.yml可以使用Sublime Text 3来编辑（冒号后需要空格）&lt;/strong&gt;&lt;/h5&gt;&lt;p&gt;deploy:&lt;br&gt;  type: git&lt;br&gt;  repo:填入自己的http&lt;br&gt;  branch: master&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello,新世界</title>
+    <link href="http://yoursite.com/2019/08/14/Hello-%E6%96%B0%E4%B8%96%E7%95%8C/"/>
+    <id>http://yoursite.com/2019/08/14/Hello-新世界/</id>
+    <published>2019-08-14T09:19:30.000Z</published>
+    <updated>2019-08-15T03:38:48.831Z</updated>
+    
+    <content type="html"><![CDATA[<p>在忙碌了两天，终于有了自己的一片小天地；</p><p>在打开自己的博客地址<a href="https://codevenom99.github.io/" target="_blank" rel="noopener">https://codevenom99.github.io/</a>  后看到自己的博客慢慢的加载下来，充满喜悦。他不是QQ空间，微博，朋友圈。这是自己的天地，满足自己内心的归属感。愿在这上面分享自己的学习经历，愿在这里遇上志同道合的朋友。</p><p>感谢Codesheep和Litten的技术支持</p><p><a href="https://space.bilibili.com/384068749?spm_id_from=333.788.b_765f7570696e666f.1" target="_blank" rel="noopener">https://space.bilibili.com/384068749?spm_id_from=333.788.b_765f7570696e666f.1</a></p><p><a href="http://litten.me/" target="_blank" rel="noopener">http://litten.me/</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;在忙碌了两天，终于有了自己的一片小天地；&lt;/p&gt;
+&lt;p&gt;在打开自己的博客地址&lt;a href=&quot;https://codevenom99.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://codevenom99.github.
+      
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+</feed>
