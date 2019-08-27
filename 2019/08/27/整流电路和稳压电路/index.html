@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/08/27/整流电路和稳压电路/5.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/27/整流电路和稳压电路/6.png">
 <meta property="og:image" content="http://yoursite.com/2019/08/27/整流电路和稳压电路/7.png">
-<meta property="og:updated_time" content="2019-08-27T12:48:25.015Z">
+<meta property="og:updated_time" content="2019-08-27T12:49:27.167Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="整流，稳压和滤波电路">
 <meta name="twitter:description" content="从今天开始记录我在电路设计这条路上的成长。今天先从整流电路和稳压电路开始。">
@@ -220,20 +220,16 @@ var _hmt = _hmt || [];
 <p>电压：需要为两端电压的1.5倍，</p>
 <p>电容：C(uF)=（I(A)/（两端电压(V) * 5% * 频率f(HZ)））* 10^6<br>            实际选择需是该值的5-10倍</p>
 <p>技巧：若负载电流&lt;150mA，电解电容可直接选择330uF（暂不知原因）</p>
-<h1 id="最后简单介绍一下三极管的几个特性。"><a href="#最后简单介绍一下三极管的几个特性。" class="headerlink" title="最后简单介绍一下三极管的几个特性。"></a>最后简单介绍一下三极管的几个特性。</h1><p>以NPN为例，下图是NPN典型工作电路图。</p>
-<img src="/2019/08/27/整流电路和稳压电路/6.png" title="This is an image">
+<h1 id="最后简单介绍一下三极管的几个特性。"><a href="#最后简单介绍一下三极管的几个特性。" class="headerlink" title="最后简单介绍一下三极管的几个特性。"></a>最后简单介绍一下三极管的几个特性。</h1><h4 id="以NPN为例，下图是NPN典型工作电路图。"><a href="#以NPN为例，下图是NPN典型工作电路图。" class="headerlink" title="以NPN为例，下图是NPN典型工作电路图。"></a>以NPN为例，下图是NPN典型工作电路图。</h4><img src="/2019/08/27/整流电路和稳压电路/6.png" title="This is an image">
 
 <p>1.Vbe&lt;0.7V（或者0.6v），处于截至状态</p>
 <p>2.Vbe&gt;0.7V，出于放大或者饱和状态。处于哪一种状态取决于集电极与基极之间的电压Vbc&lt;0处于截至状态。</p>
 <p>3.Ice=β*Ib</p>
 <p>ps：</p>
-<p>1.这里的Vbc为什么会小于0？</p>
-<p>图中经过R1的电流会随着Ib变化，当Ib变大至一定的数值，Ice的电流也随之变大，R1上的电压随之变大，Vce的电压变小，自然有可能会进入饱和区。所以三极管在做开关作用的时候R1起着至关重要的作用，可以调节三极管进入饱和区的时间。</p>
-<p>2.R2,R3的作用？</p>
-<p>（1）两个相互配合实现分压，为Vb设置电压</p>
+<h4 id="1-这里的Vbc为什么会小于0？"><a href="#1-这里的Vbc为什么会小于0？" class="headerlink" title="1.这里的Vbc为什么会小于0？"></a>1.这里的Vbc为什么会小于0？</h4><p>图中经过R1的电流会随着Ib变化，当Ib变大至一定的数值，Ice的电流也随之变大，R1上的电压随之变大，Vce的电压变小，自然有可能会进入饱和区。所以三极管在做开关作用的时候R1起着至关重要的作用，可以调节三极管进入饱和区的时间。</p>
+<h4 id="2-R2-R3的作用？"><a href="#2-R2-R3的作用？" class="headerlink" title="2.R2,R3的作用？"></a>2.R2,R3的作用？</h4><p>（1）两个相互配合实现分压，为Vb设置电压</p>
 <p>（2）R3作为下拉电阻，可以抗干扰</p>
-<p>3.NPN管接负载为什么通常接在集电极，而不是发射极？如下图</p>
-<img src="/2019/08/27/整流电路和稳压电路/7.png" title="This is an image">
+<h4 id="3-NPN管接负载为什么通常接在集电极，而不是发射极？如下图"><a href="#3-NPN管接负载为什么通常接在集电极，而不是发射极？如下图" class="headerlink" title="3.NPN管接负载为什么通常接在集电极，而不是发射极？如下图"></a>3.NPN管接负载为什么通常接在集电极，而不是发射极？如下图</h4><img src="/2019/08/27/整流电路和稳压电路/7.png" title="This is an image">
 
 <p>（1）接在发射极，无论Ib怎么变化，都不会使得三极管工作在饱和区，容易烧坏三极管。</p>
 <p>（2）R1代表负载，则其上的额定电压是有区别的。举个例子，10个发光二极管，9个额定电压是3.3V，1个不太正常，工作在3.4V。若Vb的电压设置在1V，则9个可以发光，而3.4v的那个怎么都不会发光。所以接在发射极会影响Vb的设置。</p>
@@ -370,7 +366,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#全桥整流电路"><span class="toc-number">1.</span> <span class="toc-text">全桥整流电路</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#整流元器件的挑选：反向耐压值和工作电流"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">整流元器件的挑选：反向耐压值和工作电流</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-选择整流模块"><span class="toc-number">1.0.0.0.1.1.</span> <span class="toc-text">1.选择整流模块</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-选择二极管组装"><span class="toc-number">1.0.0.0.1.2.</span> <span class="toc-text">2.选择二极管组装</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#稳压电路"><span class="toc-number">2.</span> <span class="toc-text">稳压电路</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#稳压电路的挑选："><span class="toc-number">2.0.0.1.</span> <span class="toc-text">稳压电路的挑选：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-选择稳压模块：LM78xx"><span class="toc-number">2.0.0.1.1.</span> <span class="toc-text">1.选择稳压模块：LM78xx</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-选择自己组装"><span class="toc-number">2.0.0.1.2.</span> <span class="toc-text">2.选择自己组装</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#设计思路"><span class="toc-number">2.0.0.1.2.1.</span> <span class="toc-text">设计思路</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#滤波电路"><span class="toc-number">3.</span> <span class="toc-text">滤波电路</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#滤波电路的挑选"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">滤波电路的挑选</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后简单介绍一下三极管的几个特性。"><span class="toc-number">4.</span> <span class="toc-text">最后简单介绍一下三极管的几个特性。</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#全桥整流电路"><span class="toc-number">1.</span> <span class="toc-text">全桥整流电路</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#整流元器件的挑选：反向耐压值和工作电流"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">整流元器件的挑选：反向耐压值和工作电流</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-选择整流模块"><span class="toc-number">1.0.0.0.1.1.</span> <span class="toc-text">1.选择整流模块</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-选择二极管组装"><span class="toc-number">1.0.0.0.1.2.</span> <span class="toc-text">2.选择二极管组装</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#稳压电路"><span class="toc-number">2.</span> <span class="toc-text">稳压电路</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#稳压电路的挑选："><span class="toc-number">2.0.0.1.</span> <span class="toc-text">稳压电路的挑选：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-选择稳压模块：LM78xx"><span class="toc-number">2.0.0.1.1.</span> <span class="toc-text">1.选择稳压模块：LM78xx</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-选择自己组装"><span class="toc-number">2.0.0.1.2.</span> <span class="toc-text">2.选择自己组装</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#设计思路"><span class="toc-number">2.0.0.1.2.1.</span> <span class="toc-text">设计思路</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#滤波电路"><span class="toc-number">3.</span> <span class="toc-text">滤波电路</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#滤波电路的挑选"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">滤波电路的挑选</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后简单介绍一下三极管的几个特性。"><span class="toc-number">4.</span> <span class="toc-text">最后简单介绍一下三极管的几个特性。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#以NPN为例，下图是NPN典型工作电路图。"><span class="toc-number">4.0.0.1.</span> <span class="toc-text">以NPN为例，下图是NPN典型工作电路图。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-这里的Vbc为什么会小于0？"><span class="toc-number">4.0.0.2.</span> <span class="toc-text">1.这里的Vbc为什么会小于0？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-R2-R3的作用？"><span class="toc-number">4.0.0.3.</span> <span class="toc-text">2.R2,R3的作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-NPN管接负载为什么通常接在集电极，而不是发射极？如下图"><span class="toc-number">4.0.0.4.</span> <span class="toc-text">3.NPN管接负载为什么通常接在集电极，而不是发射极？如下图</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
