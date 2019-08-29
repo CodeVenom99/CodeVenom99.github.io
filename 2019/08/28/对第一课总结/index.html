@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 电路设计 | Code Venom&#39;s Blog</title>
+  <title>对第一课总结:线性电源 | Code Venom&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Code Venom&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/电路设计/index.html">
+  <meta name="description" content="运用第一节所学到的只是搭建具有实际意义的电路:线性电源">
+<meta name="keywords" content="电路设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="对第一课总结:线性电源">
+<meta property="og:url" content="http://yoursite.com/2019/08/28/对第一课总结/index.html">
 <meta property="og:site_name" content="Code Venom&#39;s Blog">
+<meta property="og:description" content="运用第一节所学到的只是搭建具有实际意义的电路:线性电源">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/08/28/对第一课总结/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/28/对第一课总结/2.png">
+<meta property="og:updated_time" content="2019-08-29T08:08:28.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Code Venom&#39;s Blog">
+<meta name="twitter:title" content="对第一课总结:线性电源">
+<meta name="twitter:description" content="运用第一节所学到的只是搭建具有实际意义的电路:线性电源">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/28/对第一课总结/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Code Venom&#39;s Blog" type="application/atom+xml">
   
@@ -152,36 +160,148 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-对第一课总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      对第一课总结:线性电源
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/28/对第一课总结/" class="archive-article-date">
+
+        
+        <a href="/2019/08/28/对第一课总结/" class="archive-article-date">
   	<time datetime="2019-08-28T12:53:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/28/对第一课总结/">对第一课总结:线性电源</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>运用第一节所学到的只是搭建具有实际意义的电路:线性电源</p>
+<a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<h3 id="使用整流桥和稳压模块搭建"><a href="#使用整流桥和稳压模块搭建" class="headerlink" title="使用整流桥和稳压模块搭建"></a>使用整流桥和稳压模块搭建</h3><p><strong>1.首先，选择整流桥：</strong></p>
+<p>反向电压 &gt;16 * 2√2=45</p>
+<p>正向电流 &gt;10mA /2=5mA</p>
+<p>查询KBJ40xx手册，选择KBJ4005</p>
+<p><strong>2.选择C1电解电容</strong></p>
+<p>电压 &gt; 23v*1.5=34.5v</p>
+<p>电容值：（0.01A /（（23v*0.05） *100HZ）） *1000000=87uF</p>
+<p>实际选择电容值为计算的5-10倍，所以选择470uF/35v</p>
+<p><strong>3.选择C2瓷片电容</strong></p>
+<p>直接104（0.1uF）瓷片电容</p>
+<p><strong>4.选择C3电解电容</strong></p>
+<p>因为后面的负载电流不超过100mA，所以直接 330uF 电解电容</p>
+<p><strong>5.选择R1电阻</strong></p>
+<p>R1电阻用来分压，R=（5V - 3.3V）/ 0.01A=170R</p>
+<p>实际选择180R</p>
+<p>6.最后计算LM7805的功率不超过1w</p>
+<p>（23v-5v）* 0.01A=0.18w</p>
+<img src="/2019/08/28/对第一课总结/1.png" title="This is an image">
+
+
+
+<h3 id="使用分离元器件搭建"><a href="#使用分离元器件搭建" class="headerlink" title="使用分离元器件搭建"></a>使用分离元器件搭建</h3><p>1.首先，选择搭建整流桥所要的二极管：</p>
+<p>单个元件反向耐压 &gt; 16v * √2=22.6v</p>
+<p>单个元件正向电流 &gt; 10mA /2=5mA</p>
+<p>最后选择1N4148</p>
+<p>2.稳压管</p>
+<p>算上三极管be间的压降，可以选择5.6v稳压管。但是若想保证其be将电压大于开启电压，最好串联一个二极管，来提高b点的电压，实质可以达到5.7v以上。所以综合以上，选择1N4739+1N4148</p>
+<p>3.R1电阻</p>
+<p>限流，使得稳压管上的电流＞2mA，电阻值&lt;(23V-6V)/0.002A=8K5</p>
+<p>选4k5</p>
+<img src="/2019/08/28/对第一课总结/2.png" title="This is an image">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p>
+<p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -193,57 +313,119 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/28/对第一课总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/27/整流电路和稳压电路/" class="archive-article-date">
-  	<time datetime="2019-08-27T09:52:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/27/整流电路和稳压电路/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">第一课：整流，稳压和滤波电路</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/27/整流电路和稳压电路/">第一课：整流，稳压和滤波电路</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">电路设计</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用整流桥和稳压模块搭建"><span class="toc-number">1.</span> <span class="toc-text">使用整流桥和稳压模块搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用分离元器件搭建"><span class="toc-number">2.</span> <span class="toc-text">使用分离元器件搭建</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -271,9 +453,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
