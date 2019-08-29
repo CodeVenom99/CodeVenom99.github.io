@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-29T08:08:28.348Z</updated>
+  <updated>2019-08-29T08:09:19.394Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2019/08/28/%E5%AF%B9%E7%AC%AC%E4%B8%80%E8%AF%BE%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2019/08/28/对第一课总结/</id>
     <published>2019-08-28T12:53:40.000Z</published>
-    <updated>2019-08-29T08:08:28.348Z</updated>
+    <updated>2019-08-29T08:09:19.394Z</updated>
     
-    <content type="html"><![CDATA[<p>运用第一节所学到的只是搭建具有实际意义的电路:线性电源</p><a id="more"></a><h3 id="使用整流桥和稳压模块搭建"><a href="#使用整流桥和稳压模块搭建" class="headerlink" title="使用整流桥和稳压模块搭建"></a>使用整流桥和稳压模块搭建</h3><p><strong>1.首先，选择整流桥：</strong></p><p>反向电压 &gt;16 * 2√2=45</p><p>正向电流 &gt;10mA /2=5mA</p><p>查询KBJ40xx手册，选择KBJ4005</p><p><strong>2.选择C1电解电容</strong></p><p>电压 &gt; 23v*1.5=34.5v</p><p>电容值：（0.01A /（（23v*0.05） *100HZ）） *1000000=87uF</p><p>实际选择电容值为计算的5-10倍，所以选择470uF/35v</p><p><strong>3.选择C2瓷片电容</strong></p><p>直接104（0.1uF）瓷片电容</p><p><strong>4.选择C3电解电容</strong></p><p>因为后面的负载电流不超过100mA，所以直接 330uF 电解电容</p><p><strong>5.选择R1电阻</strong></p><p>R1电阻用来分压，R=（5V - 3.3V）/ 0.01A=170R</p><p>实际选择180R</p><p>6.最后计算LM7805的功率不超过1w</p><p>（23v-5v）* 0.01A=0.18w</p><img src="/2019/08/28/对第一课总结/1.png" title="This is an image"><h3 id="使用分离元器件搭建"><a href="#使用分离元器件搭建" class="headerlink" title="使用分离元器件搭建"></a>使用分离元器件搭建</h3><p>1.首先，选择搭建整流桥所要的二极管：</p><p>单个元件反向耐压 &gt; 16v * √2=22.6v</p><p>单个元件正向电流 &gt; 10mA /2=5mA</p><p>最后选择1N4148</p><p>2.稳压管</p><p>算上三极管be间的压降，可以选择5.6v稳压管。但是若想保证其be将电压大于开启电压，最好串联一个二极管，来提高b点的电压，实质可以达到5.7v以上。所以综合以上，选择1N4739+1N4148</p><p>3.R1电阻</p><p>限流，使得稳压管上的电流＞2mA，电阻值&lt;(23V-6V)/0.002A=8K5</p><p>选4k5</p><img src="/2019/08/28/对第一课总结/2.png" title="This is an image"><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
+    <content type="html"><![CDATA[<p>运用第一节所学到的只是搭建具有实际意义的电路:线性电源</p><a id="more"></a><h3 id="使用整流桥和稳压模块搭建"><a href="#使用整流桥和稳压模块搭建" class="headerlink" title="使用整流桥和稳压模块搭建"></a>使用整流桥和稳压模块搭建</h3><p><strong>1.首先，选择整流桥：</strong></p><p>反向电压 &gt;16 * 2√2=45</p><p>正向电流 &gt;10mA /2=5mA</p><p>查询KBJ40xx手册，选择KBJ4005</p><p><strong>2.选择C1电解电容</strong></p><p>电压 &gt; 23v*1.5=34.5v</p><p>电容值：（0.01A /（（23v*0.05） *100HZ）） *1000000=87uF</p><p>实际选择电容值为计算的5-10倍，所以选择470uF/35v</p><p><strong>3.选择C2瓷片电容</strong></p><p>直接104（0.1uF）瓷片电容</p><p><strong>4.选择C3电解电容</strong></p><p>因为后面的负载电流不超过100mA，所以直接 330uF 电解电容</p><p><strong>5.选择R1电阻</strong></p><p>R1电阻用来分压，R=（5V - 3.3V）/ 0.01A=170R</p><p>实际选择180R</p><p>6.最后计算LM7805的功率不超过1w</p><p>（23v-5v）* 0.01A=0.18w</p><img src="/2019/08/28/对第一课总结/1.png" title="This is an image"><h3 id="使用分离元器件搭建"><a href="#使用分离元器件搭建" class="headerlink" title="使用分离元器件搭建"></a>使用分离元器件搭建</h3><p>1.首先，选择搭建整流桥所要的二极管：</p><p>单个元件反向耐压 &gt; 16v * √2=22.6v</p><p>单个元件正向电流 &gt; 10mA /2=5mA</p><p>最后选择1N4148</p><p>2.稳压管</p><p>算上三极管be间的压降，可以选择5.6v稳压管。但是若想保证其be将电压大于开启电压，最好串联一个二极管，来提高b点的电压，实质可以达到5.7v以上。所以综合以上，选择1N4739+1N4148</p><p>3.R1电阻</p><p>限流，使得稳压管上的电流＞2mA，电阻值&lt;(23V-6V)/0.002A=8K5</p><p>选4k5</p><img src="/2019/08/28/对第一课总结/2.png" title="This is an image"><img src="/2019/08/28/对第一课总结/2.png" title="This is an image"><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
     
     <summary type="html">
     
