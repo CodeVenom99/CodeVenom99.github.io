@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-29T09:11:59.218Z</updated>
+  <updated>2019-08-29T09:14:12.473Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>三极管专题</title>
+    <link href="http://yoursite.com/2019/08/29/3.%E4%B8%89%E6%9E%81%E7%AE%A1%E4%B8%93%E9%A2%98/"/>
+    <id>http://yoursite.com/2019/08/29/3.三极管专题/</id>
+    <published>2019-08-29T08:17:20.000Z</published>
+    <updated>2019-08-29T09:14:12.473Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="最后简单介绍一下三极管的几个特性。"><a href="#最后简单介绍一下三极管的几个特性。" class="headerlink" title="最后简单介绍一下三极管的几个特性。"></a>最后简单介绍一下三极管的几个特性。</h1><a id="more"></a><h2 id="先简单介绍一下三极管的几个特性。"><a href="#先简单介绍一下三极管的几个特性。" class="headerlink" title="先简单介绍一下三极管的几个特性。"></a>先简单介绍一下三极管的几个特性。</h2><h4 id="以NPN为例，下图是NPN典型工作电路图。"><a href="#以NPN为例，下图是NPN典型工作电路图。" class="headerlink" title="以NPN为例，下图是NPN典型工作电路图。"></a>以NPN为例，下图是NPN典型工作电路图。</h4><img src="/2019/08/29/3.三极管专题/1.png" title="This is an image"><p>1.Vbe&lt;0.7V（或者0.6v），处于截至状态</p><p>2.Vbe&gt;0.7V，出于放大或者饱和状态。处于哪一种状态取决于集电极与基极之间的电压，Vbc&lt;0处于截至状态。</p><p>3.Ice=β*Ib</p><p>4.饱和状态时，Vce=0.3V</p><p>ps：</p><h4 id="1-这里的Vbc为什么会小于0？"><a href="#1-这里的Vbc为什么会小于0？" class="headerlink" title="1.这里的Vbc为什么会小于0？"></a>1.这里的Vbc为什么会小于0？</h4><p>图中经过R1的电流会随着Ib变化，当Ib变大至一定的数值，Ice的电流也随之变大，R1上的电压随之变大，Vce的电压变小，自然有可能会进入饱和区。所以三极管在做开关作用的时候R1起着至关重要的作用，可以调节三极管进入饱和区的时间。</p><h4 id="2-R2-R3的作用？"><a href="#2-R2-R3的作用？" class="headerlink" title="2.R2,R3的作用？"></a>2.R2,R3的作用？</h4><p>（1）两个相互配合实现分压，为Vb设置电压</p><p>（2）R3作为下拉电阻，可以抗干扰</p><h4 id="3-NPN管接负载为什么通常接在集电极，而不是发射极？如下图"><a href="#3-NPN管接负载为什么通常接在集电极，而不是发射极？如下图" class="headerlink" title="3.NPN管接负载为什么通常接在集电极，而不是发射极？如下图"></a>3.NPN管接负载为什么通常接在集电极，而不是发射极？如下图</h4><img src="/2019/08/29/3.三极管专题/2.png" title="This is an image"><p>（1）接在发射极，无论Ib怎么变化，都不会使得三极管工作在饱和区，容易烧坏三极管。</p><p>（2）R1代表负载，则其上的额定电压是有区别的。举个例子，10个发光二极管，9个额定电压是3.3V，1个不太正常，工作在3.4V。若Vb的电压设置在1V，则9个可以发光，而3.4v的那个怎么都不会发光。所以接在发射极会影响Vb的设置。</p><h3 id="下面正式进入三极管的实际运用"><a href="#下面正式进入三极管的实际运用" class="headerlink" title="下面正式进入三极管的实际运用"></a>下面正式进入三极管的实际运用</h3><p>如下面两幅图，三极管常用的电路，基极作为控制信号，控制ce间的开闭。这是将三极管作为开关功能运用在电路中，R2的大小可让三极管快速进入饱和区，实现三极管在截至区和饱和区的来回切换。</p><img src="/2019/08/29/3.三极管专题/3.png" title="This is an image">    <img src="/2019/08/29/3.三极管专题/4.png" title="This is an image"><p>但是如上的两幅图都有一个问题，那就是在开关闭合和打开的时候，在基极会产生电压和电流的突变，这样的突变会影响后面的三极管，使之三极管上的电压和电流产生震荡，这是电路设计中不想出现的。所以还需要消抖电路，这在下一讲中去讨论。</p><p>但对PNP管还有一个问题，那就是这个开关最好不要接在地线上，而是接在火线上，这样比较安全。</p><p>所以PNP管想运用到实际，需再进行设计</p><img src="/2019/08/29/3.三极管专题/5.png" title="This is an image"><p>如上图，将开关接在火线上，NPN的基极电压要高于发射极，NPN导通。这时在其集电极有高电平电压或者是完全导通的0.3V ，都可以使得PNP管导通</p><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;最后简单介绍一下三极管的几个特性。&quot;&gt;&lt;a href=&quot;#最后简单介绍一下三极管的几个特性。&quot; class=&quot;headerlink&quot; title=&quot;最后简单介绍一下三极管的几个特性。&quot;&gt;&lt;/a&gt;最后简单介绍一下三极管的几个特性。&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="电路设计" scheme="http://yoursite.com/tags/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>三极管专题</title>
@@ -32,18 +52,20 @@
     </summary>
     
     
-      <category term="电路设计" scheme="http://yoursite.com/tags/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
-    
   </entry>
   
   <entry>
     <title>消抖和电容放电电路</title>
-    <link href="http://yoursite.com/2019/08/29/%E6%B6%88%E6%8A%96%E5%92%8C%E7%94%B5%E5%AE%B9%E6%94%BE%E7%94%B5%E7%94%B5%E8%B7%AF/"/>
-    <id>http://yoursite.com/2019/08/29/消抖和电容放电电路/</id>
+    <link href="http://yoursite.com/2019/08/29/4.%E6%B6%88%E6%8A%96%E5%92%8C%E7%94%B5%E5%AE%B9%E6%94%BE%E7%94%B5%E7%94%B5%E8%B7%AF/"/>
+    <id>http://yoursite.com/2019/08/29/4.消抖和电容放电电路/</id>
     <published>2019-08-29T08:15:38.000Z</published>
-    <updated>2019-08-29T08:16:42.709Z</updated>
+    <updated>2019-09-04T05:08:47.661Z</updated>
+    
+    <content type="html"><![CDATA[<p> 本节介绍上节提到的消抖电路，和随之带来的电容放电电路</p><a id="more"></a><h3 id="消抖电路"><a href="#消抖电路" class="headerlink" title="消抖电路"></a>消抖电路</h3><p>当开关闭合的瞬间，会产生极大的dv/dt或者di/dt，这有可能破坏后面三极管。所以要对这样的电压或者电流的震荡进行过滤</p><img src="/2019/08/29/4.消抖和电容放电电路/1.png" title="This is an image"><p>上图是RC充电电路，电容作为储存元件，作为电压电流巨大变化时的储能元件。电容的充电时间为T=RC，一般开关抖动时间在5us以内，所以据此来调整RC的选择。</p><p>既然有充电电路就会有放电电路，但是如果不对上图做任何的改动，电容上所存储的电量只会缓慢释放。这时的电容是上正下负，这有可能使得三极管在开关关断后导通。所以还需要放电电路来辅助放电。</p><h3 id="放电电路"><a href="#放电电路" class="headerlink" title="放电电路"></a>放电电路</h3><p>想要放电加快则需要选择PNP三极管，将三极管的基极和集电极都接地，使得这两点的电位低于发射极，这样就可以在开关断开时三极管工作。但是如果加入D13的二极管，那么电容上的电流就会避开R11的电阻，直接从二极管上流过，加快放电的速度。至此放电的问题就解决了。再来看点的问题，如果没有D14二极管，则在开关闭合的时候不能对电容充电，因为没有通路。在添加了D14后，电流就会经过D14，R11正常充电。</p><img src="/2019/08/29/4.消抖和电容放电电路/2.png" title="This is an image"><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
     
     <summary type="html">
+    
+      &lt;p&gt; 本节介绍上节提到的消抖电路，和随之带来的电容放电电路&lt;/p&gt;
     
     </summary>
     
@@ -54,12 +76,12 @@
   
   <entry>
     <title>对第一课总结:线性电源</title>
-    <link href="http://yoursite.com/2019/08/28/%E5%AF%B9%E7%AC%AC%E4%B8%80%E8%AF%BE%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2019/08/28/对第一课总结/</id>
+    <link href="http://yoursite.com/2019/08/28/2.%E5%AF%B9%E7%AC%AC%E4%B8%80%E8%AF%BE%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2019/08/28/2.对第一课总结/</id>
     <published>2019-08-28T12:53:40.000Z</published>
-    <updated>2019-08-29T08:09:19.394Z</updated>
+    <updated>2019-08-31T13:28:59.772Z</updated>
     
-    <content type="html"><![CDATA[<p>运用第一节所学到的只是搭建具有实际意义的电路:线性电源</p><a id="more"></a><h3 id="使用整流桥和稳压模块搭建"><a href="#使用整流桥和稳压模块搭建" class="headerlink" title="使用整流桥和稳压模块搭建"></a>使用整流桥和稳压模块搭建</h3><p><strong>1.首先，选择整流桥：</strong></p><p>反向电压 &gt;16 * 2√2=45</p><p>正向电流 &gt;10mA /2=5mA</p><p>查询KBJ40xx手册，选择KBJ4005</p><p><strong>2.选择C1电解电容</strong></p><p>电压 &gt; 23v*1.5=34.5v</p><p>电容值：（0.01A /（（23v*0.05） *100HZ）） *1000000=87uF</p><p>实际选择电容值为计算的5-10倍，所以选择470uF/35v</p><p><strong>3.选择C2瓷片电容</strong></p><p>直接104（0.1uF）瓷片电容</p><p><strong>4.选择C3电解电容</strong></p><p>因为后面的负载电流不超过100mA，所以直接 330uF 电解电容</p><p><strong>5.选择R1电阻</strong></p><p>R1电阻用来分压，R=（5V - 3.3V）/ 0.01A=170R</p><p>实际选择180R</p><p>6.最后计算LM7805的功率不超过1w</p><p>（23v-5v）* 0.01A=0.18w</p><img src="/2019/08/28/对第一课总结/1.png" title="This is an image"><h3 id="使用分离元器件搭建"><a href="#使用分离元器件搭建" class="headerlink" title="使用分离元器件搭建"></a>使用分离元器件搭建</h3><p>1.首先，选择搭建整流桥所要的二极管：</p><p>单个元件反向耐压 &gt; 16v * √2=22.6v</p><p>单个元件正向电流 &gt; 10mA /2=5mA</p><p>最后选择1N4148</p><p>2.稳压管</p><p>算上三极管be间的压降，可以选择5.6v稳压管。但是若想保证其be将电压大于开启电压，最好串联一个二极管，来提高b点的电压，实质可以达到5.7v以上。所以综合以上，选择1N4739+1N4148</p><p>3.R1电阻</p><p>限流，使得稳压管上的电流＞2mA，电阻值&lt;(23V-6V)/0.002A=8K5</p><p>选4k5</p><img src="/2019/08/28/对第一课总结/2.png" title="This is an image"><img src="/2019/08/28/对第一课总结/2.png" title="This is an image"><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
+    <content type="html"><![CDATA[<p>运用第一节所学到的只是搭建具有实际意义的电路:线性电源</p><a id="more"></a><h3 id="使用整流桥和稳压模块搭建"><a href="#使用整流桥和稳压模块搭建" class="headerlink" title="使用整流桥和稳压模块搭建"></a>使用整流桥和稳压模块搭建</h3><p><strong>1.首先，选择整流桥：</strong></p><p>反向电压 &gt;16 * 2√2=45</p><p>正向电流 &gt;10mA /2=5mA</p><p>查询KBJ40xx手册，选择KBJ4005</p><p><strong>2.选择C1电解电容</strong></p><p>电压 &gt; 23v*1.5=34.5v</p><p>电容值：（0.01A /（（23v*0.05） *100HZ）） *1000000=87uF</p><p>实际选择电容值为计算的5-10倍，所以选择470uF/35v</p><p><strong>3.选择C2瓷片电容</strong></p><p>直接104（0.1uF）瓷片电容</p><p><strong>4.选择C3电解电容</strong></p><p>因为后面的负载电流不超过100mA，所以直接 330uF 电解电容</p><p><strong>5.选择R1电阻</strong></p><p>R1电阻用来分压，R=（5V - 3.3V）/ 0.005A=340R</p><p>实际选择330R</p><p><strong>6.最后计算LM7805的功率不超过1w</strong></p><p>（23v-5v）* 0.01A=0.18w</p><img src="/2019/08/28/2.对第一课总结/1.png" title="This is an image"><h3 id="使用分离元器件搭建"><a href="#使用分离元器件搭建" class="headerlink" title="使用分离元器件搭建"></a>使用分离元器件搭建</h3><p><strong>1.首先，选择搭建整流桥所要的二极管：</strong></p><p>单个元件反向耐压 &gt; 16v * √2=22.6v</p><p>单个元件正向电流 &gt; 10mA /2=5mA</p><p>最后选择1N4148</p><p><strong>2.稳压管</strong></p><p>算上三极管be间的压降，可以选择5.6v稳压管。但是若想保证其be将电压大于开启电压，最好串联一个二极管，来提高b点的电压，实质可以达到5.7v以上。所以综合以上，选择1N4733+1N4148</p><p><strong>3.R1电阻</strong></p><p>限流，使得稳压管上的电流＞4mA(稳压管2mA + Ibe的2mA)，电阻值  &lt;  (23V-6V)/0.004A=4K2</p><p>选4K3</p><img src="/2019/08/28/2.对第一课总结/2.png" title="This is an image"><img src="/2019/08/28/2.对第一课总结/2.png" title="This is an image"><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
     
     <summary type="html">
     
@@ -74,12 +96,12 @@
   
   <entry>
     <title>第一课：整流，稳压和滤波电路</title>
-    <link href="http://yoursite.com/2019/08/27/%E6%95%B4%E6%B5%81,%E7%A8%B3%E5%8E%8B%E5%92%8C%E6%BB%A4%E6%B3%A2%E7%94%B5%E8%B7%AF/"/>
-    <id>http://yoursite.com/2019/08/27/整流,稳压和滤波电路/</id>
+    <link href="http://yoursite.com/2019/08/27/1.%E6%95%B4%E6%B5%81,%E7%A8%B3%E5%8E%8B%E5%92%8C%E6%BB%A4%E6%B3%A2%E7%94%B5%E8%B7%AF/"/>
+    <id>http://yoursite.com/2019/08/27/1.整流,稳压和滤波电路/</id>
     <published>2019-08-27T09:52:21.000Z</published>
     <updated>2019-08-29T08:21:21.506Z</updated>
     
-    <content type="html"><![CDATA[<p>从今天开始记录我在电路设计这条路上的成长。今天先从整流,稳压和滤波电路开始。</p><a id="more"></a><h1 id="全桥整流电路"><a href="#全桥整流电路" class="headerlink" title="全桥整流电路"></a>全桥整流电路</h1><p>使用四个收尾相接的二极管组成整流电路</p><h5 id="整流元器件的挑选：反向耐压值和工作电流"><a href="#整流元器件的挑选：反向耐压值和工作电流" class="headerlink" title="整流元器件的挑选：反向耐压值和工作电流"></a>整流元器件的挑选：反向耐压值和工作电流</h5><h6 id="1-选择整流模块"><a href="#1-选择整流模块" class="headerlink" title="1.选择整流模块"></a>1.选择整流模块</h6><p>常见的KBJ40X</p><p>方向耐压值应为输入电压Vin的    2 √2    倍</p><p>电流应为负载的    1/2    倍</p><img src="/2019/08/27/整流,稳压和滤波电路/1.png" title="This is an image"><h6 id="2-选择二极管组装"><a href="#2-选择二极管组装" class="headerlink" title="2.选择二极管组装"></a>2.选择二极管组装</h6><p>常见的1N4148</p><p>单个二极管的反向耐压值应为输入电压Vin的     √2    倍</p><p>单个二极管的电流应为负载的    1/2    倍</p><img src="/2019/08/27/整流,稳压和滤波电路/2.png" title="This is an image"><h1 id="稳压电路"><a href="#稳压电路" class="headerlink" title="稳压电路"></a>稳压电路</h1><p>常用的稳压芯片为LM78xx，最好功率不要超过1w，否则会有明显的发热现象</p><h4 id="稳压电路的挑选："><a href="#稳压电路的挑选：" class="headerlink" title="稳压电路的挑选："></a>稳压电路的挑选：</h4><h5 id="1-选择稳压模块：LM78xx"><a href="#1-选择稳压模块：LM78xx" class="headerlink" title="1.选择稳压模块：LM78xx"></a>1.选择稳压模块：LM78xx</h5><h5 id="2-选择自己组装"><a href="#2-选择自己组装" class="headerlink" title="2.选择自己组装"></a>2.选择自己组装</h5><h6 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h6><p>1.稳压电路一定要有稳压管，而稳压管需在电流＞2mA的时候才会工作，所以先搭建稳压管</p><img src="/2019/08/27/整流,稳压和滤波电路/4.png" title="This is an image"><p>这样的电路看似可行但是却又问题。在负载工作的情况下，负载的电流会有一定的变化，就像图中的点击，当电机带动的负载加重时，他所需要的电流就会加大，而电极上的电流加上稳压管上的电流等于R1上的电流。当R1的电阻值选定之后，其流向后面的电流的大小也随之固定。所以，就有可能存在一种情况就是，电机所需要的电流足够大，以至于稳压管上没有电流而倒是稳压管不工作，起不到稳压的作用。那有同学回想，R1的电阻选择小一些不久可以了吗？的确如此，但是这样不管后面的负载如何，电流都是流过那么多，这就意味着存在不必要的功率浪费，毕竟功率W=L*V；</p><p>2.有了第一步，我们就知道我们的需求。我们希望电源所提供的电流可以随着负载的变化而变化，避免造成不必要的浪费。所以我们就想到了三极管。</p><img src="/2019/08/27/整流,稳压和滤波电路/5.png" title="This is an image"><p>三极管流控流的特性可以完美解决我们上述的问题。</p><p>3.为各元件选型：</p><p>（1）Vbe&gt;0.7（或者0.6v），所以稳压管选择5.6v的。</p><p>（2）根据稳压管工作电流2mA，设置R1 <strong>&lt;</strong>（23v - 5.6v）/0.002=8k7,按标准选择4k5</p><h1 id="滤波电路"><a href="#滤波电路" class="headerlink" title="滤波电路"></a>滤波电路</h1><p>电源在交流变直流后，电压并不是一点都不变的，而是存在纹波。这就需要滤波电路。</p><p>滤波电路一般都是一个电解电容并联一个104瓷片电容。</p><p><strong>电解电容</strong>的特点就是容量大，精度低，有正负极，可以用来滤除低频纹波。</p><p><strong>瓷片电容</strong>的特点是容量小，可以滤除高频纹波。</p><h4 id="滤波电路的挑选"><a href="#滤波电路的挑选" class="headerlink" title="滤波电路的挑选"></a>滤波电路的挑选</h4><p>电解电容：电压和电容</p><p>电压：需要为两端电压的1.5倍，</p><p>电容：C(uF)=（I(A)/（两端电压(V) * 5% * 频率f(HZ)））* 10^6<br>            实际选择需是该值的5-10倍</p><p>技巧：若负载电流&lt;150mA，电解电容可直接选择330uF（暂不知原因）</p><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
+    <content type="html"><![CDATA[<p>从今天开始记录我在电路设计这条路上的成长。今天先从整流,稳压和滤波电路开始。</p><a id="more"></a><h1 id="全桥整流电路"><a href="#全桥整流电路" class="headerlink" title="全桥整流电路"></a>全桥整流电路</h1><p>使用四个收尾相接的二极管组成整流电路</p><h5 id="整流元器件的挑选：反向耐压值和工作电流"><a href="#整流元器件的挑选：反向耐压值和工作电流" class="headerlink" title="整流元器件的挑选：反向耐压值和工作电流"></a>整流元器件的挑选：反向耐压值和工作电流</h5><h6 id="1-选择整流模块"><a href="#1-选择整流模块" class="headerlink" title="1.选择整流模块"></a>1.选择整流模块</h6><p>常见的KBJ40X</p><p>方向耐压值应为输入电压Vin的    2 √2    倍</p><p>电流应为负载的    1/2    倍</p><img src="/2019/08/27/1.整流,稳压和滤波电路/1.png" title="This is an image"><h6 id="2-选择二极管组装"><a href="#2-选择二极管组装" class="headerlink" title="2.选择二极管组装"></a>2.选择二极管组装</h6><p>常见的1N4148</p><p>单个二极管的反向耐压值应为输入电压Vin的     √2    倍</p><p>单个二极管的电流应为负载的    1/2    倍</p><img src="/2019/08/27/1.整流,稳压和滤波电路/2.png" title="This is an image"><h1 id="稳压电路"><a href="#稳压电路" class="headerlink" title="稳压电路"></a>稳压电路</h1><p>常用的稳压芯片为LM78xx，最好功率不要超过1w，否则会有明显的发热现象</p><h4 id="稳压电路的挑选："><a href="#稳压电路的挑选：" class="headerlink" title="稳压电路的挑选："></a>稳压电路的挑选：</h4><h5 id="1-选择稳压模块：LM78xx"><a href="#1-选择稳压模块：LM78xx" class="headerlink" title="1.选择稳压模块：LM78xx"></a>1.选择稳压模块：LM78xx</h5><h5 id="2-选择自己组装"><a href="#2-选择自己组装" class="headerlink" title="2.选择自己组装"></a>2.选择自己组装</h5><h6 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h6><p>1.稳压电路一定要有稳压管，而稳压管需在电流＞2mA的时候才会工作，所以先搭建稳压管</p><img src="/2019/08/27/1.整流,稳压和滤波电路/4.png" title="This is an image"><p>这样的电路看似可行但是却又问题。在负载工作的情况下，负载的电流会有一定的变化，就像图中的点击，当电机带动的负载加重时，他所需要的电流就会加大，而电极上的电流加上稳压管上的电流等于R1上的电流。当R1的电阻值选定之后，其流向后面的电流的大小也随之固定。所以，就有可能存在一种情况就是，电机所需要的电流足够大，以至于稳压管上没有电流而倒是稳压管不工作，起不到稳压的作用。那有同学回想，R1的电阻选择小一些不久可以了吗？的确如此，但是这样不管后面的负载如何，电流都是流过那么多，这就意味着存在不必要的功率浪费，毕竟功率W=L*V；</p><p>2.有了第一步，我们就知道我们的需求。我们希望电源所提供的电流可以随着负载的变化而变化，避免造成不必要的浪费。所以我们就想到了三极管。</p><img src="/2019/08/27/1.整流,稳压和滤波电路/5.png" title="This is an image"><p>三极管流控流的特性可以完美解决我们上述的问题。</p><p>3.为各元件选型：</p><p>（1）Vbe&gt;0.7（或者0.6v），所以稳压管选择5.6v的。</p><p>（2）根据稳压管工作电流2mA，设置R1 <strong>&lt;</strong>（23v - 5.6v）/0.002=8k7,按标准选择4k5</p><h1 id="滤波电路"><a href="#滤波电路" class="headerlink" title="滤波电路"></a>滤波电路</h1><p>电源在交流变直流后，电压并不是一点都不变的，而是存在纹波。这就需要滤波电路。</p><p>滤波电路一般都是一个电解电容并联一个104瓷片电容。</p><p><strong>电解电容</strong>的特点就是容量大，精度低，有正负极，可以用来滤除低频纹波。</p><p><strong>瓷片电容</strong>的特点是容量小，可以滤除高频纹波。</p><h4 id="滤波电路的挑选"><a href="#滤波电路的挑选" class="headerlink" title="滤波电路的挑选"></a>滤波电路的挑选</h4><p>电解电容：电压和电容</p><p>电压：需要为两端电压的1.5倍，</p><p>电容：C(uF)=（I(A)/（两端电压(V) * 5% * 频率f(HZ)））* 10^6<br>            实际选择需是该值的5-10倍</p><p>技巧：若负载电流&lt;150mA，电解电容可直接选择330uF（暂不知原因）</p><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
     
     <summary type="html">
     

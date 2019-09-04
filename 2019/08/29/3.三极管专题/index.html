@@ -6,25 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>第一课：整流，稳压和滤波电路 | Code Venom&#39;s Blog</title>
+  <title>三极管专题 | Code Venom&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从今天开始记录我在电路设计这条路上的成长。今天先从整流,稳压和滤波电路开始。">
+  <meta name="description" content="最后简单介绍一下三极管的几个特性。">
 <meta name="keywords" content="电路设计">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一课：整流，稳压和滤波电路">
-<meta property="og:url" content="http://yoursite.com/2019/08/27/整流,稳压和滤波电路/index.html">
+<meta property="og:title" content="三极管专题">
+<meta property="og:url" content="http://yoursite.com/2019/08/29/3.三极管专题/index.html">
 <meta property="og:site_name" content="Code Venom&#39;s Blog">
-<meta property="og:description" content="从今天开始记录我在电路设计这条路上的成长。今天先从整流,稳压和滤波电路开始。">
+<meta property="og:description" content="最后简单介绍一下三极管的几个特性。">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/整流,稳压和滤波电路/1.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/整流,稳压和滤波电路/2.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/整流,稳压和滤波电路/4.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/27/整流,稳压和滤波电路/5.png">
-<meta property="og:updated_time" content="2019-08-29T08:21:21.506Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/29/3.三极管专题/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/29/3.三极管专题/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/29/3.三极管专题/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/29/3.三极管专题/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/29/3.三极管专题/5.png">
+<meta property="og:updated_time" content="2019-08-29T09:14:12.473Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一课：整流，稳压和滤波电路">
-<meta name="twitter:description" content="从今天开始记录我在电路设计这条路上的成长。今天先从整流,稳压和滤波电路开始。">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/27/整流,稳压和滤波电路/1.png">
+<meta name="twitter:title" content="三极管专题">
+<meta name="twitter:description" content="最后简单介绍一下三极管的几个特性。">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/29/3.三极管专题/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Code Venom&#39;s Blog" type="application/atom+xml">
   
@@ -162,62 +163,53 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-整流,稳压和滤波电路" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-3.三极管专题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      第一课：整流，稳压和滤波电路
+      三极管专题
     </h1>
   
 
         
-        <a href="/2019/08/27/整流,稳压和滤波电路/" class="archive-article-date">
-  	<time datetime="2019-08-27T09:52:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-27</time>
+        <a href="/2019/08/29/3.三极管专题/" class="archive-article-date">
+  	<time datetime="2019-08-29T08:17:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-29</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>从今天开始记录我在电路设计这条路上的成长。今天先从整流,稳压和滤波电路开始。</p>
-<a id="more"></a>
+        <h1 id="最后简单介绍一下三极管的几个特性。"><a href="#最后简单介绍一下三极管的几个特性。" class="headerlink" title="最后简单介绍一下三极管的几个特性。"></a>最后简单介绍一下三极管的几个特性。</h1><a id="more"></a>
 
-<h1 id="全桥整流电路"><a href="#全桥整流电路" class="headerlink" title="全桥整流电路"></a>全桥整流电路</h1><p>使用四个收尾相接的二极管组成整流电路</p>
-<h5 id="整流元器件的挑选：反向耐压值和工作电流"><a href="#整流元器件的挑选：反向耐压值和工作电流" class="headerlink" title="整流元器件的挑选：反向耐压值和工作电流"></a>整流元器件的挑选：反向耐压值和工作电流</h5><h6 id="1-选择整流模块"><a href="#1-选择整流模块" class="headerlink" title="1.选择整流模块"></a>1.选择整流模块</h6><p>常见的KBJ40X</p>
-<p>方向耐压值应为输入电压Vin的    2 √2    倍</p>
-<p>电流应为负载的    1/2    倍</p>
-<img src="/2019/08/27/整流,稳压和滤波电路/1.png" title="This is an image">
+<h2 id="先简单介绍一下三极管的几个特性。"><a href="#先简单介绍一下三极管的几个特性。" class="headerlink" title="先简单介绍一下三极管的几个特性。"></a>先简单介绍一下三极管的几个特性。</h2><h4 id="以NPN为例，下图是NPN典型工作电路图。"><a href="#以NPN为例，下图是NPN典型工作电路图。" class="headerlink" title="以NPN为例，下图是NPN典型工作电路图。"></a>以NPN为例，下图是NPN典型工作电路图。</h4><img src="/2019/08/29/3.三极管专题/1.png" title="This is an image">
 
-<h6 id="2-选择二极管组装"><a href="#2-选择二极管组装" class="headerlink" title="2.选择二极管组装"></a>2.选择二极管组装</h6><p>常见的1N4148</p>
-<p>单个二极管的反向耐压值应为输入电压Vin的     √2    倍</p>
-<p>单个二极管的电流应为负载的    1/2    倍</p>
-<img src="/2019/08/27/整流,稳压和滤波电路/2.png" title="This is an image">
+<p>1.Vbe&lt;0.7V（或者0.6v），处于截至状态</p>
+<p>2.Vbe&gt;0.7V，出于放大或者饱和状态。处于哪一种状态取决于集电极与基极之间的电压，Vbc&lt;0处于截至状态。</p>
+<p>3.Ice=β*Ib</p>
+<p>4.饱和状态时，Vce=0.3V</p>
+<p>ps：</p>
+<h4 id="1-这里的Vbc为什么会小于0？"><a href="#1-这里的Vbc为什么会小于0？" class="headerlink" title="1.这里的Vbc为什么会小于0？"></a>1.这里的Vbc为什么会小于0？</h4><p>图中经过R1的电流会随着Ib变化，当Ib变大至一定的数值，Ice的电流也随之变大，R1上的电压随之变大，Vce的电压变小，自然有可能会进入饱和区。所以三极管在做开关作用的时候R1起着至关重要的作用，可以调节三极管进入饱和区的时间。</p>
+<h4 id="2-R2-R3的作用？"><a href="#2-R2-R3的作用？" class="headerlink" title="2.R2,R3的作用？"></a>2.R2,R3的作用？</h4><p>（1）两个相互配合实现分压，为Vb设置电压</p>
+<p>（2）R3作为下拉电阻，可以抗干扰</p>
+<h4 id="3-NPN管接负载为什么通常接在集电极，而不是发射极？如下图"><a href="#3-NPN管接负载为什么通常接在集电极，而不是发射极？如下图" class="headerlink" title="3.NPN管接负载为什么通常接在集电极，而不是发射极？如下图"></a>3.NPN管接负载为什么通常接在集电极，而不是发射极？如下图</h4><img src="/2019/08/29/3.三极管专题/2.png" title="This is an image">
 
+<p>（1）接在发射极，无论Ib怎么变化，都不会使得三极管工作在饱和区，容易烧坏三极管。</p>
+<p>（2）R1代表负载，则其上的额定电压是有区别的。举个例子，10个发光二极管，9个额定电压是3.3V，1个不太正常，工作在3.4V。若Vb的电压设置在1V，则9个可以发光，而3.4v的那个怎么都不会发光。所以接在发射极会影响Vb的设置。</p>
+<h3 id="下面正式进入三极管的实际运用"><a href="#下面正式进入三极管的实际运用" class="headerlink" title="下面正式进入三极管的实际运用"></a>下面正式进入三极管的实际运用</h3><p>如下面两幅图，三极管常用的电路，基极作为控制信号，控制ce间的开闭。这是将三极管作为开关功能运用在电路中，R2的大小可让三极管快速进入饱和区，实现三极管在截至区和饱和区的来回切换。</p>
+<img src="/2019/08/29/3.三极管专题/3.png" title="This is an image">    <img src="/2019/08/29/3.三极管专题/4.png" title="This is an image">
 
+<p>但是如上的两幅图都有一个问题，那就是在开关闭合和打开的时候，在基极会产生电压和电流的突变，这样的突变会影响后面的三极管，使之三极管上的电压和电流产生震荡，这是电路设计中不想出现的。所以还需要消抖电路，这在下一讲中去讨论。</p>
+<p>但对PNP管还有一个问题，那就是这个开关最好不要接在地线上，而是接在火线上，这样比较安全。</p>
+<p>所以PNP管想运用到实际，需再进行设计</p>
+<img src="/2019/08/29/3.三极管专题/5.png" title="This is an image">
 
-<h1 id="稳压电路"><a href="#稳压电路" class="headerlink" title="稳压电路"></a>稳压电路</h1><p>常用的稳压芯片为LM78xx，最好功率不要超过1w，否则会有明显的发热现象</p>
-<h4 id="稳压电路的挑选："><a href="#稳压电路的挑选：" class="headerlink" title="稳压电路的挑选："></a>稳压电路的挑选：</h4><h5 id="1-选择稳压模块：LM78xx"><a href="#1-选择稳压模块：LM78xx" class="headerlink" title="1.选择稳压模块：LM78xx"></a>1.选择稳压模块：LM78xx</h5><h5 id="2-选择自己组装"><a href="#2-选择自己组装" class="headerlink" title="2.选择自己组装"></a>2.选择自己组装</h5><h6 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h6><p>1.稳压电路一定要有稳压管，而稳压管需在电流＞2mA的时候才会工作，所以先搭建稳压管</p>
-<img src="/2019/08/27/整流,稳压和滤波电路/4.png" title="This is an image">
-
-<p>这样的电路看似可行但是却又问题。在负载工作的情况下，负载的电流会有一定的变化，就像图中的点击，当电机带动的负载加重时，他所需要的电流就会加大，而电极上的电流加上稳压管上的电流等于R1上的电流。当R1的电阻值选定之后，其流向后面的电流的大小也随之固定。所以，就有可能存在一种情况就是，电机所需要的电流足够大，以至于稳压管上没有电流而倒是稳压管不工作，起不到稳压的作用。那有同学回想，R1的电阻选择小一些不久可以了吗？的确如此，但是这样不管后面的负载如何，电流都是流过那么多，这就意味着存在不必要的功率浪费，毕竟功率W=L*V；</p>
-<p>2.有了第一步，我们就知道我们的需求。我们希望电源所提供的电流可以随着负载的变化而变化，避免造成不必要的浪费。所以我们就想到了三极管。</p>
-<img src="/2019/08/27/整流,稳压和滤波电路/5.png" title="This is an image">
-
-<p>三极管流控流的特性可以完美解决我们上述的问题。</p>
-<p>3.为各元件选型：</p>
-<p>（1）Vbe&gt;0.7（或者0.6v），所以稳压管选择5.6v的。</p>
-<p>（2）根据稳压管工作电流2mA，设置R1 <strong>&lt;</strong>（23v - 5.6v）/0.002=8k7,按标准选择4k5</p>
-<h1 id="滤波电路"><a href="#滤波电路" class="headerlink" title="滤波电路"></a>滤波电路</h1><p>电源在交流变直流后，电压并不是一点都不变的，而是存在纹波。这就需要滤波电路。</p>
-<p>滤波电路一般都是一个电解电容并联一个104瓷片电容。</p>
-<p><strong>电解电容</strong>的特点就是容量大，精度低，有正负极，可以用来滤除低频纹波。</p>
-<p><strong>瓷片电容</strong>的特点是容量小，可以滤除高频纹波。</p>
-<h4 id="滤波电路的挑选"><a href="#滤波电路的挑选" class="headerlink" title="滤波电路的挑选"></a>滤波电路的挑选</h4><p>电解电容：电压和电容</p>
-<p>电压：需要为两端电压的1.5倍，</p>
-<p>电容：C(uF)=（I(A)/（两端电压(V) * 5% * 频率f(HZ)））* 10^6<br>            实际选择需是该值的5-10倍</p>
-<p>技巧：若负载电流&lt;150mA，电解电容可直接选择330uF（暂不知原因）</p>
+<p>如上图，将开关接在火线上，NPN的基极电压要高于发射极，NPN导通。这时在其集电极有高电平电压或者是完全导通的0.3V ，都可以使得PNP管导通</p>
+<p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p>
+<p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>
 <p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p>
 <p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>
 
@@ -310,7 +302,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/27/整流,稳压和滤波电路/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/29/3.三极管专题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -324,18 +316,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/08/28/对第一课总结/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          对第一课总结:线性电源
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/20/安装keil相关程序/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">安装keil相关程序</div>
+    <a href="/2019/08/29/三极管专题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">三极管专题</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -362,7 +345,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#全桥整流电路"><span class="toc-number">1.</span> <span class="toc-text">全桥整流电路</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#整流元器件的挑选：反向耐压值和工作电流"><span class="toc-number">1.0.0.0.1.</span> <span class="toc-text">整流元器件的挑选：反向耐压值和工作电流</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1-选择整流模块"><span class="toc-number">1.0.0.0.1.1.</span> <span class="toc-text">1.选择整流模块</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2-选择二极管组装"><span class="toc-number">1.0.0.0.1.2.</span> <span class="toc-text">2.选择二极管组装</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#稳压电路"><span class="toc-number">2.</span> <span class="toc-text">稳压电路</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#稳压电路的挑选："><span class="toc-number">2.0.0.1.</span> <span class="toc-text">稳压电路的挑选：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-选择稳压模块：LM78xx"><span class="toc-number">2.0.0.1.1.</span> <span class="toc-text">1.选择稳压模块：LM78xx</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-选择自己组装"><span class="toc-number">2.0.0.1.2.</span> <span class="toc-text">2.选择自己组装</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#设计思路"><span class="toc-number">2.0.0.1.2.1.</span> <span class="toc-text">设计思路</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#滤波电路"><span class="toc-number">3.</span> <span class="toc-text">滤波电路</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#滤波电路的挑选"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">滤波电路的挑选</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#最后简单介绍一下三极管的几个特性。"><span class="toc-number">1.</span> <span class="toc-text">最后简单介绍一下三极管的几个特性。</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#先简单介绍一下三极管的几个特性。"><span class="toc-number">1.1.</span> <span class="toc-text">先简单介绍一下三极管的几个特性。</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#以NPN为例，下图是NPN典型工作电路图。"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">以NPN为例，下图是NPN典型工作电路图。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-这里的Vbc为什么会小于0？"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">1.这里的Vbc为什么会小于0？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-R2-R3的作用？"><span class="toc-number">1.1.0.3.</span> <span class="toc-text">2.R2,R3的作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-NPN管接负载为什么通常接在集电极，而不是发射极？如下图"><span class="toc-number">1.1.0.4.</span> <span class="toc-text">3.NPN管接负载为什么通常接在集电极，而不是发射极？如下图</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下面正式进入三极管的实际运用"><span class="toc-number">1.1.1.</span> <span class="toc-text">下面正式进入三极管的实际运用</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
