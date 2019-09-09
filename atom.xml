@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-09T09:05:57.705Z</updated>
+  <updated>2019-09-09T09:09:52.201Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,24 +21,14 @@
     <link href="http://yoursite.com/2019/09/06/%E5%87%BA%E6%89%8B%E5%8D%B3%E8%AF%81%E6%98%8E/"/>
     <id>http://yoursite.com/2019/09/06/出手即证明/</id>
     <published>2019-09-06T12:51:16.000Z</published>
-    <updated>2019-09-09T09:05:57.705Z</updated>
+    <updated>2019-09-09T09:09:52.201Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a><p>你能从一片空白里</p><p>看到可能吗？</p><p>有些人要看到证据，</p><p>等有人做到了，才敢出手。</p><p>但那些第一个行动的人，他们等过吗？</p><p>他们直接出手！</p><p>不管有没有人做到过！</p><p>你能从一片空白里看到 可能吗？</p><p>​                                                        –2019年国际男篮世界杯NIKE宣传广告</p><p><a href="https://www.bilibili.com/video/av66097981?from=search&amp;seid=10556162536052557404" target="_blank" rel="noopener">https://www.bilibili.com/video/av66097981?from=search&amp;seid=10556162536052557404</a></p>]]></content>
+    <content type="html"><![CDATA[<p>你能从一片空白里</p><p>看到可能吗？</p><a id="more"></a><p>有些人要看到证据，</p><p>等有人做到了，才敢出手。</p><p>但那些第一个行动的人，他们等过吗？</p><p>他们直接出手！</p><p>不管有没有人做到过！</p><p>你能从一片空白里看到 可能吗？</p><p>​                                                        –2019年国际男篮世界杯NIKE宣传广告</p><p><a href="https://www.bilibili.com/video/av66097981?from=search&amp;seid=10556162536052557404" target="_blank" rel="noopener">https://www.bilibili.com/video/av66097981?from=search&amp;seid=10556162536052557404</a></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-&lt;p&gt;你能从一片空白里&lt;/p&gt;
+      &lt;p&gt;你能从一片空白里&lt;/p&gt;
 &lt;p&gt;看到可能吗？&lt;/p&gt;
-&lt;p&gt;有些人要看到证据，&lt;/p&gt;
-&lt;p&gt;等有人做到了，才敢出手。&lt;/p&gt;
-&lt;p&gt;但那些第一个行动的人，他们等过吗？&lt;/p&gt;
-&lt;p&gt;他们直接出手！&lt;/p&gt;
-&lt;p&gt;不管有没有人做到过！&lt;
-      
     
     </summary>
     
@@ -52,18 +42,13 @@
     <link href="http://yoursite.com/2019/09/04/5.%E4%B8%89%E6%9E%81%E7%AE%A1%E8%BF%90%E7%94%A8%EF%BC%9A%E7%94%B5%E6%9C%BA%E6%AD%A3%E5%8F%8D%E8%BD%AC/"/>
     <id>http://yoursite.com/2019/09/04/5.三极管运用：电机正反转/</id>
     <published>2019-09-04T05:55:57.000Z</published>
-    <updated>2019-09-04T13:45:09.077Z</updated>
+    <updated>2019-09-09T09:10:06.691Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a><h3 id="使用三极管专题相关知识搭建开关电机和电机正反转"><a href="#使用三极管专题相关知识搭建开关电机和电机正反转" class="headerlink" title="使用三极管专题相关知识搭建开关电机和电机正反转"></a>使用三极管专题相关知识搭建开关电机和电机正反转</h3><h5 id="运用NPN来搭建开关电源"><a href="#运用NPN来搭建开关电源" class="headerlink" title="运用NPN来搭建开关电源"></a>运用NPN来搭建开关电源</h5><img src="/2019/09/04/5.三极管运用：电机正反转/1.png" title="This is an image"><p>NPN发射极接地，D7，D12的亮灭是跟着电机的运转来。电机转，D7亮，D12灭；电机不转，D7灭，D12亮。</p><p>三极管导通的时候，集电极的电压为0.3v，电机和D7都导通，D10上侧的电压为1V=0.3+0.7（D8压降），为保证D10不通，所以串联一个D12的二极管，促使D10的电压不会在工作电压上，保证D10发光二极管熄灭。</p><p>三极管关断的时候，集电极是不导通的，再加上D8的二极管，电流只能从R18走，从而将D10点亮。</p><p>除此以外，因为电机在关断后电机作为电感元件，在断电之后会反向放电，所以Q11上的电压和电流有可能会过载，所以要并联一个二极管帮助放电</p><h5 id="运用NPN搭建开关电源"><a href="#运用NPN搭建开关电源" class="headerlink" title="运用NPN搭建开关电源"></a>运用NPN搭建开关电源</h5><img src="/2019/09/04/5.三极管运用：电机正反转/2.png" title="This is an image"><h5 id="电机正反转"><a href="#电机正反转" class="headerlink" title="电机正反转"></a>电机正反转</h5><img src="/2019/09/04/5.三极管运用：电机正反转/3.png" title="This is an image"><p>R12和C9，R30和C10组成滤波电路。放电电路可以继续用之前提到的放电电路，但是在这个电路中还有一种更加讨巧的办法，这次我们选用NPN，当另外一条线路开关关闭时的高电平来促使NPN管的导通，让电容放电，而开关关闭的那一条线则是正常充电。需要注意的一点是NPN管的集电极需要接在电容的上端，这样可以省个二极管</p><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="使用三极管专题相关知识搭建开关电机和电机正反转"><a href="#使用三极管专题相关知识搭建开关电机和电机正反转" class="headerlink" title="使用三极管专题相关知识搭建开关电机和电机正反转"></a>使用三极管专题相关知识搭建开关电机和电机正反转</h3><a id="more"></a><h5 id="运用NPN来搭建开关电源"><a href="#运用NPN来搭建开关电源" class="headerlink" title="运用NPN来搭建开关电源"></a>运用NPN来搭建开关电源</h5><img src="/2019/09/04/5.三极管运用：电机正反转/1.png" title="This is an image"><p>NPN发射极接地，D7，D12的亮灭是跟着电机的运转来。电机转，D7亮，D12灭；电机不转，D7灭，D12亮。</p><p>三极管导通的时候，集电极的电压为0.3v，电机和D7都导通，D10上侧的电压为1V=0.3+0.7（D8压降），为保证D10不通，所以串联一个D12的二极管，促使D10的电压不会在工作电压上，保证D10发光二极管熄灭。</p><p>三极管关断的时候，集电极是不导通的，再加上D8的二极管，电流只能从R18走，从而将D10点亮。</p><p>除此以外，因为电机在关断后电机作为电感元件，在断电之后会反向放电，所以Q11上的电压和电流有可能会过载，所以要并联一个二极管帮助放电</p><h5 id="运用NPN搭建开关电源"><a href="#运用NPN搭建开关电源" class="headerlink" title="运用NPN搭建开关电源"></a>运用NPN搭建开关电源</h5><img src="/2019/09/04/5.三极管运用：电机正反转/2.png" title="This is an image"><h5 id="电机正反转"><a href="#电机正反转" class="headerlink" title="电机正反转"></a>电机正反转</h5><img src="/2019/09/04/5.三极管运用：电机正反转/3.png" title="This is an image"><p>R12和C9，R30和C10组成滤波电路。放电电路可以继续用之前提到的放电电路，但是在这个电路中还有一种更加讨巧的办法，这次我们选用NPN，当另外一条线路开关关闭时的高电平来促使NPN管的导通，让电容放电，而开关关闭的那一条线则是正常充电。需要注意的一点是NPN管的集电极需要接在电容的上端，这样可以省个二极管</p><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-&lt;h3 id=&quot;使用三极管专题相关知识搭建开关电机和电机正反转&quot;&gt;&lt;a href=&quot;#使用三极管专题相关知识搭建开关电机和电机正反转&quot; class=&quot;headerlink&quot; title=&quot;使用三极管专题相关知识搭建开关电机和电机正反转&quot;&gt;&lt;/
-      
+      &lt;h3 id=&quot;使用三极管专题相关知识搭建开关电机和电机正反转&quot;&gt;&lt;a href=&quot;#使用三极管专题相关知识搭建开关电机和电机正反转&quot; class=&quot;headerlink&quot; title=&quot;使用三极管专题相关知识搭建开关电机和电机正反转&quot;&gt;&lt;/a&gt;使用三极管专题相关知识搭建开关电机和电机正反转&lt;/h3&gt;
     
     </summary>
     
