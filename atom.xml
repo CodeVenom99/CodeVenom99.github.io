@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-09T09:16:01.714Z</updated>
+  <updated>2019-09-11T13:25:59.810Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PCB封装</title>
+    <link href="http://yoursite.com/2019/09/11/PCB%E5%B0%81%E8%A3%85/"/>
+    <id>http://yoursite.com/2019/09/11/PCB封装/</id>
+    <published>2019-09-11T12:28:03.000Z</published>
+    <updated>2019-09-11T13:25:59.810Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="常用封装和快捷键"><a href="#常用封装和快捷键" class="headerlink" title="常用封装和快捷键"></a>常用封装和快捷键</h4><a id="more"></a><h6 id="层名"><a href="#层名" class="headerlink" title="层名"></a>层名</h6><p>Top Layer           上电气层</p><p>Bottom Layer    下电气层</p><p>Top Overlayer    丝印层</p><p>Mechanical         机械层</p><h6 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h6><p>ctrl+m=测量</p><p>ctrl+g=调整栅格大小</p><p>ctrl+q=切换单位（英尺-毫米）</p><h6 id="批量修改元件封装："><a href="#批量修改元件封装：" class="headerlink" title="批量修改元件封装："></a>批量修改元件封装：</h6><p>1.工具—封装管理器</p><p>2.shift选中需要修改的多个元件</p><p>3.移除右侧所有封装</p><p>4.添加—PCB元件库：任意—浏览—选择需要的封装</p><p>5.接受变化—执行更改</p><h6 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h6><p>1.选中需要的元器件</p><p>2.ctrl+c，然后将光标选择元件上的某一点</p><p>3.ctrl+v，选择需要粘贴的地方</p><h6 id="放置原点"><a href="#放置原点" class="headerlink" title="放置原点"></a>放置原点</h6><p>上方菜单栏—编辑—设置参考—定位</p><h6 id="常见贴片电阻封装"><a href="#常见贴片电阻封装" class="headerlink" title="常见贴片电阻封装"></a>常见贴片电阻封装</h6><p><a href="https://wenku.baidu.com/view/5ee37b10f242336c1fb95e2b.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/5ee37b10f242336c1fb95e2b.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;常用封装和快捷键&quot;&gt;&lt;a href=&quot;#常用封装和快捷键&quot; class=&quot;headerlink&quot; title=&quot;常用封装和快捷键&quot;&gt;&lt;/a&gt;常用封装和快捷键&lt;/h4&gt;
+    
+    </summary>
+    
+    
+      <category term="电路设计" scheme="http://yoursite.com/tags/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>出手即证明</title>
