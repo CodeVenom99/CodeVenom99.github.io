@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-11T13:25:59.810Z</updated>
+  <updated>2019-09-18T07:54:50.533Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>修复微软输入法在系统内打字打不了中文</title>
+    <link href="http://yoursite.com/2019/09/18/%E4%BF%AE%E5%A4%8D%E5%BE%AE%E8%BD%AF%E8%BE%93%E5%85%A5%E6%B3%95%E5%9C%A8%E7%B3%BB%E7%BB%9F%E5%86%85%E6%89%93%E5%AD%97%E6%89%93%E4%B8%8D%E4%BA%86%E4%B8%AD%E6%96%87/"/>
+    <id>http://yoursite.com/2019/09/18/修复微软输入法在系统内打字打不了中文/</id>
+    <published>2019-09-18T07:48:55.000Z</published>
+    <updated>2019-09-18T07:54:50.533Z</updated>
+    
+    <content type="html"><![CDATA[<p> 问题描述：修复在微软输入法下，切换至中文输入法，但是给文件夹命名时打不出中文，只能英文。但是在浏览器内打字正常</p><a id="more"></a><p>直接使用腾讯管家中的工具箱-电脑诊所来修复该问题，直接上图</p><img src="/2019/09/18/修复微软输入法在系统内打字打不了中文/1.png" title="This is an image"><img src="/2019/09/18/修复微软输入法在系统内打字打不了中文/2.png" title="This is an image">]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 问题描述：修复在微软输入法下，切换至中文输入法，但是给文件夹命名时打不出中文，只能英文。但是在浏览器内打字正常&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="疑难杂症" scheme="http://yoursite.com/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+    
+  </entry>
   
   <entry>
     <title>PCB封装</title>
