@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-18T07:54:50.533Z</updated>
+  <updated>2019-10-08T12:59:11.466Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>比较器内部工作原理</title>
+    <link href="http://yoursite.com/2019/10/08/%E6%AF%94%E8%BE%83%E5%99%A8%E5%86%85%E9%83%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2019/10/08/比较器内部工作原理/</id>
+    <published>2019-10-08T12:58:36.000Z</published>
+    <updated>2019-10-08T12:59:11.466Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="电路设计" scheme="http://yoursite.com/tags/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>修复微软输入法在系统内打字打不了中文</title>
@@ -37,17 +53,17 @@
   </entry>
   
   <entry>
-    <title>PCB封装</title>
-    <link href="http://yoursite.com/2019/09/11/PCB%E5%B0%81%E8%A3%85/"/>
-    <id>http://yoursite.com/2019/09/11/PCB封装/</id>
+    <title>PCB画板</title>
+    <link href="http://yoursite.com/2019/09/11/PCB%E7%94%BB%E6%9D%BF/"/>
+    <id>http://yoursite.com/2019/09/11/PCB画板/</id>
     <published>2019-09-11T12:28:03.000Z</published>
-    <updated>2019-09-11T13:25:59.810Z</updated>
+    <updated>2019-10-09T12:06:02.219Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="常用封装和快捷键"><a href="#常用封装和快捷键" class="headerlink" title="常用封装和快捷键"></a>常用封装和快捷键</h4><a id="more"></a><h6 id="层名"><a href="#层名" class="headerlink" title="层名"></a>层名</h6><p>Top Layer           上电气层</p><p>Bottom Layer    下电气层</p><p>Top Overlayer    丝印层</p><p>Mechanical         机械层</p><h6 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h6><p>ctrl+m=测量</p><p>ctrl+g=调整栅格大小</p><p>ctrl+q=切换单位（英尺-毫米）</p><h6 id="批量修改元件封装："><a href="#批量修改元件封装：" class="headerlink" title="批量修改元件封装："></a>批量修改元件封装：</h6><p>1.工具—封装管理器</p><p>2.shift选中需要修改的多个元件</p><p>3.移除右侧所有封装</p><p>4.添加—PCB元件库：任意—浏览—选择需要的封装</p><p>5.接受变化—执行更改</p><h6 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h6><p>1.选中需要的元器件</p><p>2.ctrl+c，然后将光标选择元件上的某一点</p><p>3.ctrl+v，选择需要粘贴的地方</p><h6 id="放置原点"><a href="#放置原点" class="headerlink" title="放置原点"></a>放置原点</h6><p>上方菜单栏—编辑—设置参考—定位</p><h6 id="常见贴片电阻封装"><a href="#常见贴片电阻封装" class="headerlink" title="常见贴片电阻封装"></a>常见贴片电阻封装</h6><p><a href="https://wenku.baidu.com/view/5ee37b10f242336c1fb95e2b.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/5ee37b10f242336c1fb95e2b.html</a></p>]]></content>
+    <content type="html"><![CDATA[<h4 id="常用快捷键，工具和元件零碎知识"><a href="#常用快捷键，工具和元件零碎知识" class="headerlink" title="常用快捷键，工具和元件零碎知识"></a>常用快捷键，工具和元件零碎知识</h4><a id="more"></a><h4 id="层名"><a href="#层名" class="headerlink" title="层名"></a>层名</h4><p>Top Layer           上电气层</p><p>Bottom Layer    下电气层</p><p>Top Overlayer    丝印层</p><p>Mechanical         机械层</p><p>keep-out layer    可以定义板子形状</p><h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><p>CTRL+M=测量</p><p>SHIFT+G=调整栅格大小(左下角回变化)</p><p>如果需要自定义栅格大小：察看—栅格—设置跳转栅格</p><p>CTRL+Q=切换单位（英尺-毫米）</p><p>O+P=设置旋转角度（旋转步骤）</p><p>T+C=交叉探针</p><p>SHIFT+S=只显示单层</p><p>D+S+D=定义板子形状</p><p>P+T=布置走线</p><p>P+V=布置过孔</p><p>T+E=泪滴</p><p>P+G=敷铜</p><h5 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h5><h6 id="交叉探针：在pcb和原理图间相互寻找元件"><a href="#交叉探针：在pcb和原理图间相互寻找元件" class="headerlink" title="交叉探针：在pcb和原理图间相互寻找元件"></a>交叉探针：在pcb和原理图间相互寻找元件</h6><p>工具-交叉探针 （快捷键T+C）AD13无法选择元件，只能是管脚网络标签，端口。。。</p><p>显示高亮之后，可以右击-过滤器-清除过滤器（或者右下角的 ‘清除’ 按钮）来取消高亮</p><h6 id="批量修改元件封装："><a href="#批量修改元件封装：" class="headerlink" title="批量修改元件封装："></a>批量修改元件封装：</h6><p>1.工具—封装管理器</p><p>2.shift选中需要修改的多个元件</p><p>3.移除右侧所有封装</p><p>4.添加—PCB元件库：任意—浏览—选择需要的封装</p><p>5.接受变化—执行更改</p><h6 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h6><p>1.选中需要的元器件</p><p>2.ctrl+c，然后将光标选择元件上的某一点</p><p>3.ctrl+v，选择需要粘贴的地方</p><h6 id="放置原点"><a href="#放置原点" class="headerlink" title="放置原点"></a>放置原点</h6><p>上方菜单栏—编辑—设置参考—定位</p><h6 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h6><p>原理图检查 ——工程—编译（第一个）</p><p>​                    ——工具—设计规则检查（第一个）</p><p>PCB检查     —— 报告—报告（第一个）—报告————检查所有连线是否都已经连接上</p><h6 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h6><p>重新编辑原理图后导入PCB出现部分网络NET导入失败：</p><p>回到PCB：设计—网络表—编辑网络—删除错误网络NET重新导入</p><h6 id="规则设置（一般）"><a href="#规则设置（一般）" class="headerlink" title="规则设置（一般）"></a>规则设置（一般）</h6><p>间隙（clearance）=10mil</p><p>线宽（width）=8mil最小    ~    20mil最大</p><p>过孔（RoutingvVias）=0.5mil外直径    ~    0.3mil内直径</p><p>多连接（PolygonConnect）=导线数4，宽度10mil</p><p>通孔（holesize）=1mil    ~    200mil</p><p>焊盘之间距离（MinimumSolderMaskSliver）=8mil</p><p>焊盘到丝印距离（SilkToSolderMaskClearance）=0mil</p><p>丝印到丝印距离（SilkToSilkClearance）=0mil</p><h5 id="元件零碎知识"><a href="#元件零碎知识" class="headerlink" title="元件零碎知识"></a>元件零碎知识</h5><h6 id="正负极判断"><a href="#正负极判断" class="headerlink" title="正负极判断"></a>正负极判断</h6><p>有阴影是负极</p><p>两级都是方块有一个是双杠线是负极</p><p>发光二极管的方孔是负极</p><h6 id="VDD-VEE-Vss意思"><a href="#VDD-VEE-Vss意思" class="headerlink" title="VDD,VEE,Vss意思"></a>VDD,VEE,Vss意思</h6><p>VDD=电源正极    VEE=模拟电路负极    Vss=数字电路负极</p><h6 id="电容ABCD型"><a href="#电容ABCD型" class="headerlink" title="电容ABCD型"></a>电容ABCD型</h6><p>代表大小尺寸，前面的英寸，冒号后面为毫米。及长 宽和高的具体尺寸</p><p>A(1206:3216-18)<br>B(1210:3528-21)<br>C(2312:6032-28)<br>D(2917:7343-31)</p><h6 id="常见贴片电阻封装"><a href="#常见贴片电阻封装" class="headerlink" title="常见贴片电阻封装"></a>常见贴片电阻封装</h6><p><a href="https://wenku.baidu.com/view/5ee37b10f242336c1fb95e2b.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/5ee37b10f242336c1fb95e2b.html</a></p>]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;常用封装和快捷键&quot;&gt;&lt;a href=&quot;#常用封装和快捷键&quot; class=&quot;headerlink&quot; title=&quot;常用封装和快捷键&quot;&gt;&lt;/a&gt;常用封装和快捷键&lt;/h4&gt;
+      &lt;h4 id=&quot;常用快捷键，工具和元件零碎知识&quot;&gt;&lt;a href=&quot;#常用快捷键，工具和元件零碎知识&quot; class=&quot;headerlink&quot; title=&quot;常用快捷键，工具和元件零碎知识&quot;&gt;&lt;/a&gt;常用快捷键，工具和元件零碎知识&lt;/h4&gt;
     
     </summary>
     
