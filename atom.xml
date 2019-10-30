@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-10-26T08:46:52.976Z</updated>
+  <updated>2019-10-30T09:50:09.757Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sublime</title>
+    <link href="http://yoursite.com/2019/10/30/sublime/"/>
+    <id>http://yoursite.com/2019/10/30/sublime/</id>
+    <published>2019-10-30T09:40:42.000Z</published>
+    <updated>2019-10-30T09:50:09.757Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="需要交互时，需要安装SublimeREPL"><a href="#需要交互时，需要安装SublimeREPL" class="headerlink" title="需要交互时，需要安装SublimeREPL"></a>需要交互时，需要安装SublimeREPL</h5><p>直接从第二步开始安装</p><p><a href="https://blog.csdn.net/zangfong/article/details/82824124" target="_blank" rel="noopener">https://blog.csdn.net/zangfong/article/details/82824124</a></p><h5 id="关闭更新"><a href="#关闭更新" class="headerlink" title="关闭更新"></a>关闭更新</h5><p>点击菜单栏“Preferences”=&gt; “Settings-User”将里面修改为如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;color_scheme&quot;: &quot;Packages/Colorcoder/Monokai (Colorcoded).tmTheme&quot;,</span><br><span class="line">    &quot;font_size&quot;: 17,</span><br><span class="line">    &quot;ignored_packages&quot;:</span><br><span class="line">    [</span><br><span class="line">    ]</span><br><span class="line">,</span><br><span class="line">    &quot;update_check&quot;: false,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>点击菜单－help－Enter License，粘贴下面证书号</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">—– BEGIN LICENSE —– </span><br><span class="line">Die Socialisten GmbH </span><br><span class="line">10 User License </span><br><span class="line">EA7E-800613 </span><br><span class="line">51311422 E45F49ED 3F0ADE0C E5B8A508 </span><br><span class="line">2F4D9B65 64E1E244 EDA11F0E F9D06110 </span><br><span class="line">B7B2E826 E6FDAA72 2C653693 5D80582F </span><br><span class="line">09DCFFB5 113A940C 5045C0CD 5F8332F8 </span><br><span class="line">34356CC6 D96F6FDB 4DEC20EA 0A24D83A </span><br><span class="line">2C82C329 E3290B29 A16109A7 EC198EB9 </span><br><span class="line">F28EBB17 9C07403F D44BA75A C23C6874 </span><br><span class="line">EBF11238 5546C3DD 737DC616 445C2941 </span><br><span class="line">—— END LICENSE ——</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;需要交互时，需要安装SublimeREPL&quot;&gt;&lt;a href=&quot;#需要交互时，需要安装SublimeREPL&quot; class=&quot;headerlink&quot; title=&quot;需要交互时，需要安装SublimeREPL&quot;&gt;&lt;/a&gt;需要交互时，需要安装SublimeREPL&lt;/
+      
+    
+    </summary>
+    
+    
+      <category term="软件安装" scheme="http://yoursite.com/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
+    
+  </entry>
   
   <entry>
     <title>C和指针</title>
@@ -38,6 +61,33 @@
   
   <entry>
     <title>6.半波整流电路</title>
+    <link href="http://yoursite.com/2019/10/25/6.%E4%BA%A4%E6%B5%81%E7%94%B5%E8%BD%AC%E7%9B%B4%E6%B5%81%E7%A8%B3%E5%8E%8B%E7%94%B5%E8%B7%AF/"/>
+    <id>http://yoursite.com/2019/10/25/6.交流电转直流稳压电路/</id>
+    <published>2019-10-25T13:05:21.000Z</published>
+    <updated>2019-10-27T08:19:47.629Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+
+
+
+      
+    
+    </summary>
+    
+    
+      <category term="电路设计" scheme="http://yoursite.com/tags/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6.半波整流电路</title>
     <link href="http://yoursite.com/2019/10/25/6.%E5%8D%8A%E6%B3%A2%E6%95%B4%E6%B5%81%E7%94%B5%E8%B7%AF/"/>
     <id>http://yoursite.com/2019/10/25/6.半波整流电路/</id>
     <published>2019-10-25T13:05:21.000Z</published>
@@ -55,6 +105,26 @@
 
 &lt;img src=&quot;/2019/10/25/6.半波整流电路/交流转直流稳压电路-2.jpg
       
+    
+    </summary>
+    
+    
+      <category term="电路设计" scheme="http://yoursite.com/tags/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>比较器内部工作原理</title>
+    <link href="http://yoursite.com/2019/10/08/%E6%AF%94%E8%BE%83%E5%99%A8%E5%86%85%E9%83%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2019/10/08/比较器内部工作原理/</id>
+    <published>2019-10-08T12:58:36.000Z</published>
+    <updated>2019-10-27T08:19:51.626Z</updated>
+    
+    <content type="html"><![CDATA[<p>浅显探索比较器内部逻辑</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;浅显探索比较器内部逻辑&lt;/p&gt;
     
     </summary>
     
