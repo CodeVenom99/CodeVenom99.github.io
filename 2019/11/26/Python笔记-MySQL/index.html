@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello,新世界 | Code Venom&#39;s Blog</title>
+  <title>Python笔记-MySQL | Code Venom&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在忙碌了两天，终于有了自己的一片小天地； 在打开自己的博客地址https://codevenom99.github.io/  后看到自己的博客慢慢的加载下来，充满喜悦。他不是QQ空间，微博，朋友圈。这是自己的天地，满足自己内心的归属感。愿在这上面分享自己的学习经历，愿在这里遇上志同道合的朋友。 感谢Codesheep和Litten的技术支持 https://space.bilibili.com/3">
-<meta name="keywords" content="随笔">
+  <meta name="description" content="MySQL">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello,新世界">
-<meta property="og:url" content="http://yoursite.com/2019/08/14/Hello-新世界/index.html">
+<meta property="og:title" content="Python笔记-MySQL">
+<meta property="og:url" content="http://yoursite.com/2019/11/26/Python笔记-MySQL/index.html">
 <meta property="og:site_name" content="Code Venom&#39;s Blog">
-<meta property="og:description" content="在忙碌了两天，终于有了自己的一片小天地； 在打开自己的博客地址https://codevenom99.github.io/  后看到自己的博客慢慢的加载下来，充满喜悦。他不是QQ空间，微博，朋友圈。这是自己的天地，满足自己内心的归属感。愿在这上面分享自己的学习经历，愿在这里遇上志同道合的朋友。 感谢Codesheep和Litten的技术支持 https://space.bilibili.com/3">
+<meta property="og:description" content="MySQL">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-15T03:38:48.831Z">
+<meta property="og:updated_time" content="2019-11-27T13:01:21.245Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello,新世界">
-<meta name="twitter:description" content="在忙碌了两天，终于有了自己的一片小天地； 在打开自己的博客地址https://codevenom99.github.io/  后看到自己的博客慢慢的加载下来，充满喜悦。他不是QQ空间，微博，朋友圈。这是自己的天地，满足自己内心的归属感。愿在这上面分享自己的学习经历，愿在这里遇上志同道合的朋友。 感谢Codesheep和Litten的技术支持 https://space.bilibili.com/3">
+<meta name="twitter:title" content="Python笔记-MySQL">
+<meta name="twitter:description" content="MySQL">
   
     <link rel="alternative" href="/atom.xml" title="Code Venom&#39;s Blog" type="application/atom+xml">
   
@@ -157,31 +157,39 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Hello-新世界" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Python笔记-MySQL" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello,新世界
+      Python笔记-MySQL
     </h1>
   
 
         
-        <a href="/2019/08/14/Hello-新世界/" class="archive-article-date">
-  	<time datetime="2019-08-14T09:19:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-14</time>
+        <a href="/2019/11/26/Python笔记-MySQL/" class="archive-article-date">
+  	<time datetime="2019-11-26T06:42:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>在忙碌了两天，终于有了自己的一片小天地；</p>
-<p>在打开自己的博客地址<a href="https://codevenom99.github.io/" target="_blank" rel="noopener">https://codevenom99.github.io/</a>  后看到自己的博客慢慢的加载下来，充满喜悦。他不是QQ空间，微博，朋友圈。这是自己的天地，满足自己内心的归属感。愿在这上面分享自己的学习经历，愿在这里遇上志同道合的朋友。</p>
-<p>感谢Codesheep和Litten的技术支持</p>
-<p><a href="https://space.bilibili.com/384068749?spm_id_from=333.788.b_765f7570696e666f.1" target="_blank" rel="noopener">https://space.bilibili.com/384068749?spm_id_from=333.788.b_765f7570696e666f.1</a></p>
-<p><a href="http://litten.me/" target="_blank" rel="noopener">http://litten.me/</a></p>
+        <p>MySQL</p>
+<a id="more"></a>
+
+<h5 id="1-创建表"><a href="#1-创建表" class="headerlink" title="1.创建表"></a>1.创建表</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"><span class="comment">#链接数据库</span></span><br><span class="line">db=pymysql.Connect(host=<span class="string">"localhost"</span>,port=<span class="number">3306</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"xs960712xs"</span>,db=<span class="string">"stu"</span>,charset=<span class="string">"utf8"</span>)</span><br><span class="line"><span class="comment">#创建一个游标对象cursor()</span></span><br><span class="line">cursor=db.cursor()</span><br><span class="line"><span class="comment">#创建表格</span></span><br><span class="line"><span class="comment">#定义sql语句</span></span><br><span class="line">sql=<span class="string">"""create table student(</span></span><br><span class="line"><span class="string">	id int not null,</span></span><br><span class="line"><span class="string">	name varchar(20),</span></span><br><span class="line"><span class="string">	age int</span></span><br><span class="line"><span class="string">)"""</span></span><br><span class="line"><span class="comment">#执行sql语句</span></span><br><span class="line">cursor.execute(sql)</span><br><span class="line"><span class="comment">#关闭数据库</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-增加数据"><a href="#2-增加数据" class="headerlink" title="2.增加数据"></a>2.增加数据</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"><span class="comment">#链接数据库</span></span><br><span class="line">db=pymysql.Connect(host=<span class="string">"localhost"</span>,port=<span class="number">3306</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"xs960712xs"</span>,db=<span class="string">"stu"</span>,charset=<span class="string">"utf8"</span>)</span><br><span class="line"><span class="comment">#创建一个游标对象cursor()</span></span><br><span class="line">cursor=db.cursor()</span><br><span class="line"><span class="comment">#向表格增加数据</span></span><br><span class="line"><span class="comment">#定义sql语句</span></span><br><span class="line">sql=<span class="string">'''insert into student(id,name,age)</span></span><br><span class="line"><span class="string">		value(2,"list",12)</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="comment">#执行sql语句</span></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">db.commit()</span><br><span class="line"><span class="comment">#关闭数据库</span></span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-查询数据"><a href="#3-查询数据" class="headerlink" title="3.查询数据"></a>3.查询数据</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"><span class="comment">#链接数据库</span></span><br><span class="line">db=pymysql.Connect(host=<span class="string">"localhost"</span>,port=<span class="number">3306</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"xs960712xs"</span>,db=<span class="string">"stu"</span>,charset=<span class="string">"utf8"</span>)</span><br><span class="line"><span class="comment">#创建一个游标对象cursor()</span></span><br><span class="line">cursor=db.cursor()</span><br><span class="line"><span class="comment">#查询数据</span></span><br><span class="line"><span class="comment">#定义sql语句</span></span><br><span class="line">sql=<span class="string">"select * from student"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#执行sql语句</span></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">data1=cursor.fetchone()<span class="comment">#获取单个对象（一行数据）</span></span><br><span class="line">data2=cursor.fetchall()<span class="comment">#获取多个数据（多个数据）</span></span><br><span class="line"></span><br><span class="line">print(data1)</span><br><span class="line">print(data2[<span class="number">0</span>][<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line">结果：</span><br><span class="line">(<span class="number">1</span>, <span class="string">'a'</span>, <span class="number">12</span>)</span><br><span class="line"><span class="number">13</span></span><br><span class="line">[Finished <span class="keyword">in</span> <span class="number">0.3</span>s]</span><br><span class="line"></span><br><span class="line">数据库里的数据为</span><br><span class="line">id name age</span><br><span class="line"><span class="number">1</span>  a    <span class="number">12</span></span><br><span class="line"><span class="number">2</span>  b    <span class="number">13</span></span><br><span class="line"><span class="number">3</span>  c    <span class="number">14</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="4-更新数据"><a href="#4-更新数据" class="headerlink" title="4.更新数据"></a>4.更新数据</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"><span class="comment">#链接数据库</span></span><br><span class="line">db=pymysql.Connect(host=<span class="string">"localhost"</span>,port=<span class="number">3306</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"xs960712xs"</span>,db=<span class="string">"stu"</span>,charset=<span class="string">"utf8"</span>)</span><br><span class="line"><span class="comment">#创建一个游标对象cursor()</span></span><br><span class="line">cursor=db.cursor()</span><br><span class="line"><span class="comment">#更新数据</span></span><br><span class="line"><span class="comment">#定义sql语句</span></span><br><span class="line">sql=<span class="string">"update student set age=age+1"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#执行sql语句</span></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">db.commit()</span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-删除数据"><a href="#5-删除数据" class="headerlink" title="5.删除数据"></a>5.删除数据</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"><span class="comment">#链接数据库</span></span><br><span class="line">db=pymysql.Connect(host=<span class="string">"localhost"</span>,port=<span class="number">3306</span>,user=<span class="string">"root"</span>,passwd=<span class="string">"xs960712xs"</span>,db=<span class="string">"stu"</span>,charset=<span class="string">"utf8"</span>)</span><br><span class="line"><span class="comment">#创建一个游标对象cursor()</span></span><br><span class="line">cursor=db.cursor()</span><br><span class="line"><span class="comment">#更新数据</span></span><br><span class="line"><span class="comment">#定义sql语句</span></span><br><span class="line">sql=<span class="string">"delete from student where name='a'"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#执行sql语句</span></span><br><span class="line">cursor.execute(sql)</span><br><span class="line">db.commit()</span><br><span class="line">db.close()</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -216,7 +224,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -272,7 +280,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/14/Hello-新世界/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/26/Python笔记-MySQL/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,15 +294,11 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/08/14/搭建博客遇到的问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          搭建博客遇到的问题
-        
-      </div>
-    </a>
   
+    <a href="/2019/11/26/Python笔记-日期和时间类型/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python笔记-日期和时间类型</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -319,7 +323,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-创建表"><span class="toc-number">1.</span> <span class="toc-text">1.创建表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-增加数据"><span class="toc-number">2.</span> <span class="toc-text">2.增加数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-查询数据"><span class="toc-number">3.</span> <span class="toc-text">3.查询数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-更新数据"><span class="toc-number">4.</span> <span class="toc-text">4.更新数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5-删除数据"><span class="toc-number">5.</span> <span class="toc-text">5.删除数据</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -436,7 +440,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">电路设计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">疑难杂症</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -444,11 +464,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
+                <a href="javascript:void(0)" class="js-tag color5">软件安装</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">电路设计</a>
+                <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
               </li>
             
             <div class="clearfix"></div>

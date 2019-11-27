@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Code Venom&#39;s Blog">
 <meta property="og:description" content="Python笔记-网络编程">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-02T07:02:43.017Z">
+<meta property="og:updated_time" content="2019-11-06T13:24:07.543Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python笔记-网络编程">
 <meta name="twitter:description" content="Python笔记-网络编程">
@@ -180,6 +180,8 @@ var _hmt = _hmt || [];
         <p>Python笔记-网络编程</p>
 <a id="more"></a>
 
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">客户端</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">client=socket.socket()<span class="comment">#生成socket连接对象</span></span><br><span class="line">client.connect((<span class="string">"localhost"</span>,<span class="number">6969</span>))<span class="comment">#和目标主机建立连接</span></span><br><span class="line">client.send(<span class="string">"hello word"</span>.encode())<span class="comment">#字符串转二进制，发送数据</span></span><br><span class="line">client.close()<span class="comment">#关闭</span></span><br><span class="line"></span><br><span class="line">服务器</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">server=socket.socket()</span><br><span class="line">server.bind((<span class="string">"localhost"</span>,<span class="number">6969</span>))</span><br><span class="line">server.listen()<span class="comment">#监听</span></span><br><span class="line">print(<span class="string">"准备接电话了"</span>)</span><br><span class="line">con,addr=server.accept()<span class="comment">#等待消息</span></span><br><span class="line">print(con,addr)</span><br><span class="line">data=con.recv(<span class="number">1024</span>)</span><br><span class="line">print(<span class="string">"接收到消息："</span>,data)</span><br><span class="line">server.close()</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -294,8 +296,8 @@ var _hmt = _hmt || [];
     </a>
   
   
-    <a href="/2019/10/30/sublime/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">sublime</div>
+    <a href="/2019/11/01/Python笔记-电子邮件/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python笔记-电子邮件</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -443,7 +445,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -451,15 +453,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">软件安装</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -468,6 +462,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">软件安装</a>
               </li>
              
               <li class="article-tag-list-item">
