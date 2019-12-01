@@ -18,8 +18,8 @@
   
   <entry>
     <title>Python笔记-MySQL</title>
-    <link href="http://yoursite.com/2019/11/26/Python%E7%AC%94%E8%AE%B0-MySQL/"/>
-    <id>http://yoursite.com/2019/11/26/Python笔记-MySQL/</id>
+    <link href="http://yoursite.com/2019/11/26/Python%E7%AC%94%E8%AE%B0-11.MySQL/"/>
+    <id>http://yoursite.com/2019/11/26/Python笔记-11.MySQL/</id>
     <published>2019-11-26T06:42:40.000Z</published>
     <updated>2019-11-27T13:01:21.245Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>Python笔记-日期和时间类型</title>
-    <link href="http://yoursite.com/2019/11/26/Python%E7%AC%94%E8%AE%B0-%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E7%B1%BB%E5%9E%8B/"/>
-    <id>http://yoursite.com/2019/11/26/Python笔记-日期和时间类型/</id>
+    <link href="http://yoursite.com/2019/11/26/Python%E7%AC%94%E8%AE%B0-12.%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://yoursite.com/2019/11/26/Python笔记-12.日期和时间类型/</id>
     <published>2019-11-26T06:42:40.000Z</published>
     <updated>2019-11-27T13:01:23.037Z</updated>
     
@@ -58,8 +58,8 @@
   
   <entry>
     <title>Python笔记-多线程，多进程</title>
-    <link href="http://yoursite.com/2019/11/25/Python%E7%AC%94%E8%AE%B0-%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    <id>http://yoursite.com/2019/11/25/Python笔记-多线程/</id>
+    <link href="http://yoursite.com/2019/11/25/Python%E7%AC%94%E8%AE%B0-10.%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    <id>http://yoursite.com/2019/11/25/Python笔记-10.多线程/</id>
     <published>2019-11-25T06:01:09.000Z</published>
     <updated>2019-11-26T06:41:20.285Z</updated>
     
@@ -78,8 +78,8 @@
   
   <entry>
     <title>Python笔记-异常处理</title>
-    <link href="http://yoursite.com/2019/11/02/Python%E7%AC%94%E8%AE%B0-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
-    <id>http://yoursite.com/2019/11/02/Python笔记-异常处理/</id>
+    <link href="http://yoursite.com/2019/11/02/Python%E7%AC%94%E8%AE%B0-7.%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+    <id>http://yoursite.com/2019/11/02/Python笔记-7.异常处理/</id>
     <published>2019-11-02T06:07:58.000Z</published>
     <updated>2019-11-02T06:40:25.694Z</updated>
     
@@ -118,8 +118,8 @@
   
   <entry>
     <title>Python笔记-面向对象</title>
-    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://yoursite.com/2019/11/01/Python笔记-面向对象/</id>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-6.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-6.面向对象/</id>
     <published>2019-11-01T09:43:44.000Z</published>
     <updated>2019-11-01T11:25:44.985Z</updated>
     
@@ -137,9 +137,89 @@
   </entry>
   
   <entry>
+    <title>Python笔记-电子邮件</title>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-9.%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-9.电子邮件/</id>
+    <published>2019-11-01T08:42:57.000Z</published>
+    <updated>2019-11-06T13:09:14.682Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python笔记-电子邮件</p><a id="more"></a><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br><span class="line"><span class="comment">#smtp.qq.com</span></span><br><span class="line">msg_from=<span class="string">"1060401004@qq.com"</span><span class="comment">#发送方</span></span><br><span class="line">pwd=<span class="string">"oaiihqjgfyfobfic"</span><span class="comment">#授权码</span></span><br><span class="line">to=<span class="string">"e1060401004@163.com"</span><span class="comment">#接收方</span></span><br><span class="line"><span class="comment">#主题和内容</span></span><br><span class="line">subject=<span class="string">"python发送的邮件"</span></span><br><span class="line">content=<span class="string">"开始直播了"</span></span><br><span class="line"><span class="comment">#构造邮件</span></span><br><span class="line">msg=MIMEText(content)</span><br><span class="line">msg[<span class="string">"Subject"</span>]=subject</span><br><span class="line">msg[<span class="string">"From"</span>]=msg_from</span><br><span class="line">msg[<span class="string">"To"</span>]=to</span><br><span class="line"><span class="comment">#发送邮件</span></span><br><span class="line">ss=smtplib.SMTP_SSL(<span class="string">"smtp.qq.com"</span>,<span class="number">465</span>)</span><br><span class="line">ss.login(msg_from,pwd)</span><br><span class="line">ss.sendmail(msg_from,to,msg.as_string())</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python笔记-电子邮件&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python笔记-函数与模块</title>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-4.%E5%87%BD%E6%95%B0%E4%B8%8E%E6%A8%A1%E5%9D%97/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-4.函数与模块/</id>
+    <published>2019-11-01T08:42:57.000Z</published>
+    <updated>2019-12-01T11:52:06.223Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python笔记-函数与模块</p><a id="more"></a><h5 id="初识函数和return语句"><a href="#初识函数和return语句" class="headerlink" title="初识函数和return语句"></a>初识函数和return语句</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(a,b,c,d)</span>:</span></span><br><span class="line">e=a+b+c+d</span><br><span class="line"><span class="keyword">return</span> e</span><br><span class="line">print(<span class="string">"本次结果："</span>,add(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>))</span><br></pre></td></tr></table></figure><h5 id="参数传入"><a href="#参数传入" class="headerlink" title="参数传入"></a>参数传入</h5><h6 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def add(a,b,c=2):</span><br><span class="line">e=a+b+c</span><br><span class="line">return e</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2))</span><br><span class="line">结果：</span><br><span class="line">本次结果：5</span><br><span class="line"></span><br><span class="line">修改默认参数</span><br><span class="line">def add(a,b,c=2):</span><br><span class="line">e=a+b+c</span><br><span class="line">return e</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2,c=4))</span><br><span class="line">结果：</span><br><span class="line">本次结果：7</span><br></pre></td></tr></table></figure><h6 id="参数未知"><a href="#参数未知" class="headerlink" title="参数未知"></a>参数未知</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def add(*args):</span><br><span class="line">print(args)</span><br><span class="line">add(1,2,4,5)</span><br><span class="line">结果：</span><br><span class="line">本次结果：(1,2,4,5)</span><br><span class="line"></span><br><span class="line">def add(*args):</span><br><span class="line">summ=0</span><br><span class="line">for i in args:</span><br><span class="line">summ=summ+i</span><br><span class="line">return summ</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2,4,5))</span><br><span class="line">结果：</span><br><span class="line">本次结果：12</span><br></pre></td></tr></table></figure><h5 id="模块导入"><a href="#模块导入" class="headerlink" title="模块导入"></a>模块导入</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import 模块名</span><br><span class="line">from 模块名1 import 模块名2</span><br></pre></td></tr></table></figure><p>安装第三方模块</p><p>cmd窗口依次输入</p><p>python -m pip install –upgrade pip#更新pip工具</p><p>pip install 模块名</p><p>pip uninstall 模块名</p><p>pip list #查看所有安装的第三方模块</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python笔记-函数与模块&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python笔记-循环结构</title>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-3.%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-3.循环结构/</id>
+    <published>2019-11-01T08:42:57.000Z</published>
+    <updated>2019-12-01T12:10:33.486Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python笔记-循环结构</p><a id="more"></a><h5 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">10</span>,<span class="number">3</span>):<span class="comment">#对序列遍历</span></span><br><span class="line">print(i)</span><br><span class="line">结果：</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"></span><br><span class="line">list1=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>]<span class="comment">#列表</span></span><br><span class="line">tuple1=(<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>)<span class="comment">#元组</span></span><br><span class="line">dict1=&#123;<span class="string">"name"</span>:<span class="string">"张三"</span>,<span class="string">"age"</span>:<span class="number">18</span>&#125;<span class="comment">#字典</span></span><br><span class="line">col&#123;<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>&#125;<span class="comment">#集合</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> list1:</span><br><span class="line">print(i)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> tuple1:</span><br><span class="line">print(i)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> dict1:</span><br><span class="line">print(i)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> col:</span><br><span class="line">print(i)</span><br><span class="line">结果：</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line"><span class="number">6</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">9</span></span><br><span class="line">张三</span><br><span class="line"><span class="number">18</span></span><br><span class="line">a</span><br><span class="line">c</span><br><span class="line">b2</span><br></pre></td></tr></table></figure><h5 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">i=0</span><br><span class="line">while i&lt;10:</span><br><span class="line">print(i)</span><br><span class="line">i=i+1</span><br></pre></td></tr></table></figure><h5 id="break和continus"><a href="#break和continus" class="headerlink" title="break和continus"></a>break和continus</h5><p>break:结束本次循环</p><p>continus：跳过本次循环</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python笔记-循环结构&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python笔记-变量，数据类型和运算符</title>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-1.%E5%8F%98%E9%87%8F%EF%BC%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-1.变量，数据类型和运算符/</id>
+    <published>2019-11-01T08:42:57.000Z</published>
+    <updated>2019-12-01T12:51:52.418Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python笔记-变量，数据类型和运算符</p><a id="more"></a><h5 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h5><p>整形，浮点型，字符串</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">a=&quot;制表符\n表示换行&quot;</span><br><span class="line">print(a)</span><br><span class="line">结果：</span><br><span class="line">制表符</span><br><span class="line">表示换行</span><br><span class="line"></span><br><span class="line">a=r&quot;制表符\n表示换行&quot;</span><br><span class="line">print(a)</span><br><span class="line">结果：</span><br><span class="line">制表符\n表示换行</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list1=[1,2,3,4,5]#列表</span><br><span class="line">tuple1=(5,6,7,8,9)#元组</span><br><span class="line">dict1=&#123;&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:18&#125;#字典</span><br><span class="line">col&#123;&quot;a&quot;,&quot;b&quot;,&quot;c&quot;&#125;#集合</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python笔记-变量，数据类型和运算符&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Python笔记-文件读写</title>
-    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/"/>
-    <id>http://yoursite.com/2019/11/01/Python笔记-文件读写/</id>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-5.%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-5.文件读写/</id>
     <published>2019-11-01T08:42:57.000Z</published>
     <updated>2019-11-02T06:40:13.615Z</updated>
     
@@ -157,17 +237,17 @@
   </entry>
   
   <entry>
-    <title>Python笔记-网络编程</title>
-    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
-    <id>http://yoursite.com/2019/11/01/Python笔记-网络编程/</id>
+    <title>Python笔记-选择结构</title>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-2.%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-2.选择结构/</id>
     <published>2019-11-01T08:42:57.000Z</published>
-    <updated>2019-11-06T13:24:07.543Z</updated>
+    <updated>2019-12-01T12:22:56.877Z</updated>
     
-    <content type="html"><![CDATA[<p>Python笔记-网络编程</p><a id="more"></a><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">客户端</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">client=socket.socket()<span class="comment">#生成socket连接对象</span></span><br><span class="line">client.connect((<span class="string">"localhost"</span>,<span class="number">6969</span>))<span class="comment">#和目标主机建立连接</span></span><br><span class="line">client.send(<span class="string">"hello word"</span>.encode())<span class="comment">#字符串转二进制，发送数据</span></span><br><span class="line">client.close()<span class="comment">#关闭</span></span><br><span class="line"></span><br><span class="line">服务器</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">server=socket.socket()</span><br><span class="line">server.bind((<span class="string">"localhost"</span>,<span class="number">6969</span>))</span><br><span class="line">server.listen()<span class="comment">#监听</span></span><br><span class="line">print(<span class="string">"准备接电话了"</span>)</span><br><span class="line">con,addr=server.accept()<span class="comment">#等待消息</span></span><br><span class="line">print(con,addr)</span><br><span class="line">data=con.recv(<span class="number">1024</span>)</span><br><span class="line">print(<span class="string">"接收到消息："</span>,data)</span><br><span class="line">server.close()</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>Python笔记-选择结构</p><a id="more"></a><h5 id="elif多条件判断"><a href="#elif多条件判断" class="headerlink" title="elif多条件判断"></a>elif多条件判断</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = 88</span><br><span class="line">if a &gt;= 90:</span><br><span class="line">    print(&quot;优秀&quot;)</span><br><span class="line">elif a &gt;=80:</span><br><span class="line">    print(&quot;良好&quot;)</span><br><span class="line">elif a &gt;= 70:</span><br><span class="line">    print(&quot;中等&quot;)</span><br><span class="line">elif a &gt;= 60:</span><br><span class="line">    print(&quot;及格&quot;)</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Python笔记-网络编程&lt;/p&gt;
+      &lt;p&gt;Python笔记-选择结构&lt;/p&gt;
     
     </summary>
     
@@ -177,17 +257,17 @@
   </entry>
   
   <entry>
-    <title>Python笔记-电子邮件</title>
-    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/"/>
-    <id>http://yoursite.com/2019/11/01/Python笔记-电子邮件/</id>
+    <title>Python笔记-网络编程</title>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-8.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-8.网络编程/</id>
     <published>2019-11-01T08:42:57.000Z</published>
-    <updated>2019-11-06T13:09:14.682Z</updated>
+    <updated>2019-11-06T13:24:07.543Z</updated>
     
-    <content type="html"><![CDATA[<p>Python笔记-电子邮件</p><a id="more"></a><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br><span class="line"><span class="comment">#smtp.qq.com</span></span><br><span class="line">msg_from=<span class="string">"1060401004@qq.com"</span><span class="comment">#发送方</span></span><br><span class="line">pwd=<span class="string">"oaiihqjgfyfobfic"</span><span class="comment">#授权码</span></span><br><span class="line">to=<span class="string">"e1060401004@163.com"</span><span class="comment">#接收方</span></span><br><span class="line"><span class="comment">#主题和内容</span></span><br><span class="line">subject=<span class="string">"python发送的邮件"</span></span><br><span class="line">content=<span class="string">"开始直播了"</span></span><br><span class="line"><span class="comment">#构造邮件</span></span><br><span class="line">msg=MIMEText(content)</span><br><span class="line">msg[<span class="string">"Subject"</span>]=subject</span><br><span class="line">msg[<span class="string">"From"</span>]=msg_from</span><br><span class="line">msg[<span class="string">"To"</span>]=to</span><br><span class="line"><span class="comment">#发送邮件</span></span><br><span class="line">ss=smtplib.SMTP_SSL(<span class="string">"smtp.qq.com"</span>,<span class="number">465</span>)</span><br><span class="line">ss.login(msg_from,pwd)</span><br><span class="line">ss.sendmail(msg_from,to,msg.as_string())</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>Python笔记-网络编程</p><a id="more"></a><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">客户端</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">client=socket.socket()<span class="comment">#生成socket连接对象</span></span><br><span class="line">client.connect((<span class="string">"localhost"</span>,<span class="number">6969</span>))<span class="comment">#和目标主机建立连接</span></span><br><span class="line">client.send(<span class="string">"hello word"</span>.encode())<span class="comment">#字符串转二进制，发送数据</span></span><br><span class="line">client.close()<span class="comment">#关闭</span></span><br><span class="line"></span><br><span class="line">服务器</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">server=socket.socket()</span><br><span class="line">server.bind((<span class="string">"localhost"</span>,<span class="number">6969</span>))</span><br><span class="line">server.listen()<span class="comment">#监听</span></span><br><span class="line">print(<span class="string">"准备接电话了"</span>)</span><br><span class="line">con,addr=server.accept()<span class="comment">#等待消息</span></span><br><span class="line">print(con,addr)</span><br><span class="line">data=con.recv(<span class="number">1024</span>)</span><br><span class="line">print(<span class="string">"接收到消息："</span>,data)</span><br><span class="line">server.close()</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Python笔记-电子邮件&lt;/p&gt;
+      &lt;p&gt;Python笔记-网络编程&lt;/p&gt;
     
     </summary>
     
@@ -294,13 +374,13 @@
   </entry>
   
   <entry>
-    <title>比较器内部工作原理</title>
-    <link href="http://yoursite.com/2019/10/08/%E6%AF%94%E8%BE%83%E5%99%A8%E5%86%85%E9%83%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
-    <id>http://yoursite.com/2019/10/08/比较器内部工作原理/</id>
+    <title>7.比较器内部工作原理</title>
+    <link href="http://yoursite.com/2019/10/08/7.%E6%AF%94%E8%BE%83%E5%99%A8%E5%86%85%E9%83%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2019/10/08/7.比较器内部工作原理/</id>
     <published>2019-10-08T12:58:36.000Z</published>
-    <updated>2019-10-27T08:19:51.626Z</updated>
+    <updated>2019-10-27T07:06:55.948Z</updated>
     
-    <content type="html"><![CDATA[<p>浅显探索比较器内部逻辑</p><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<p>浅显探索比较器内部逻辑</p><a id="more"></a><img src="/2019/10/08/7.比较器内部工作原理/比较器内部原理-1.jpg" title="This is an image"><img src="/2019/10/08/7.比较器内部工作原理/比较器内部原理-2.jpg" title="This is an image">]]></content>
     
     <summary type="html">
     
@@ -314,13 +394,13 @@
   </entry>
   
   <entry>
-    <title>7.比较器内部工作原理</title>
-    <link href="http://yoursite.com/2019/10/08/7.%E6%AF%94%E8%BE%83%E5%99%A8%E5%86%85%E9%83%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
-    <id>http://yoursite.com/2019/10/08/7.比较器内部工作原理/</id>
+    <title>比较器内部工作原理</title>
+    <link href="http://yoursite.com/2019/10/08/%E6%AF%94%E8%BE%83%E5%99%A8%E5%86%85%E9%83%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2019/10/08/比较器内部工作原理/</id>
     <published>2019-10-08T12:58:36.000Z</published>
-    <updated>2019-10-27T07:06:55.948Z</updated>
+    <updated>2019-10-27T08:19:51.626Z</updated>
     
-    <content type="html"><![CDATA[<p>浅显探索比较器内部逻辑</p><a id="more"></a><img src="/2019/10/08/7.比较器内部工作原理/比较器内部原理-1.jpg" title="This is an image"><img src="/2019/10/08/7.比较器内部工作原理/比较器内部原理-2.jpg" title="This is an image">]]></content>
+    <content type="html"><![CDATA[<p>浅显探索比较器内部逻辑</p><a id="more"></a>]]></content>
     
     <summary type="html">
     
@@ -350,87 +430,6 @@
     
     
       <category term="疑难杂症" scheme="http://yoursite.com/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PCB画板</title>
-    <link href="http://yoursite.com/2019/09/11/PCB%E7%94%BB%E6%9D%BF/"/>
-    <id>http://yoursite.com/2019/09/11/PCB画板/</id>
-    <published>2019-09-11T12:28:03.000Z</published>
-    <updated>2019-10-09T12:06:02.219Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="常用快捷键，工具和元件零碎知识"><a href="#常用快捷键，工具和元件零碎知识" class="headerlink" title="常用快捷键，工具和元件零碎知识"></a>常用快捷键，工具和元件零碎知识</h4><a id="more"></a><h4 id="层名"><a href="#层名" class="headerlink" title="层名"></a>层名</h4><p>Top Layer           上电气层</p><p>Bottom Layer    下电气层</p><p>Top Overlayer    丝印层</p><p>Mechanical         机械层</p><p>keep-out layer    可以定义板子形状</p><h4 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h4><p>CTRL+M=测量</p><p>SHIFT+G=调整栅格大小(左下角回变化)</p><p>如果需要自定义栅格大小：察看—栅格—设置跳转栅格</p><p>CTRL+Q=切换单位（英尺-毫米）</p><p>O+P=设置旋转角度（旋转步骤）</p><p>T+C=交叉探针</p><p>SHIFT+S=只显示单层</p><p>D+S+D=定义板子形状</p><p>P+T=布置走线</p><p>P+V=布置过孔</p><p>T+E=泪滴</p><p>P+G=敷铜</p><h5 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h5><h6 id="交叉探针：在pcb和原理图间相互寻找元件"><a href="#交叉探针：在pcb和原理图间相互寻找元件" class="headerlink" title="交叉探针：在pcb和原理图间相互寻找元件"></a>交叉探针：在pcb和原理图间相互寻找元件</h6><p>工具-交叉探针 （快捷键T+C）AD13无法选择元件，只能是管脚网络标签，端口。。。</p><p>显示高亮之后，可以右击-过滤器-清除过滤器（或者右下角的 ‘清除’ 按钮）来取消高亮</p><h6 id="批量修改元件封装："><a href="#批量修改元件封装：" class="headerlink" title="批量修改元件封装："></a>批量修改元件封装：</h6><p>1.工具—封装管理器</p><p>2.shift选中需要修改的多个元件</p><p>3.移除右侧所有封装</p><p>4.添加—PCB元件库：任意—浏览—选择需要的封装</p><p>5.接受变化—执行更改</p><h6 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title="复制粘贴"></a>复制粘贴</h6><p>1.选中需要的元器件</p><p>2.ctrl+c，然后将光标选择元件上的某一点</p><p>3.ctrl+v，选择需要粘贴的地方</p><h6 id="放置原点"><a href="#放置原点" class="headerlink" title="放置原点"></a>放置原点</h6><p>上方菜单栏—编辑—设置参考—定位</p><h6 id="检查"><a href="#检查" class="headerlink" title="检查"></a>检查</h6><p>原理图检查 ——工程—编译（第一个）</p><p>​                    ——工具—设计规则检查（第一个）</p><p>PCB检查     —— 报告—报告（第一个）—报告————检查所有连线是否都已经连接上</p><h6 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h6><p>重新编辑原理图后导入PCB出现部分网络NET导入失败：</p><p>回到PCB：设计—网络表—编辑网络—删除错误网络NET重新导入</p><h6 id="规则设置（一般）"><a href="#规则设置（一般）" class="headerlink" title="规则设置（一般）"></a>规则设置（一般）</h6><p>间隙（clearance）=10mil</p><p>线宽（width）=8mil最小    ~    20mil最大</p><p>过孔（RoutingvVias）=0.5mil外直径    ~    0.3mil内直径</p><p>多连接（PolygonConnect）=导线数4，宽度10mil</p><p>通孔（holesize）=1mil    ~    200mil</p><p>焊盘之间距离（MinimumSolderMaskSliver）=8mil</p><p>焊盘到丝印距离（SilkToSolderMaskClearance）=0mil</p><p>丝印到丝印距离（SilkToSilkClearance）=0mil</p><h5 id="元件零碎知识"><a href="#元件零碎知识" class="headerlink" title="元件零碎知识"></a>元件零碎知识</h5><h6 id="正负极判断"><a href="#正负极判断" class="headerlink" title="正负极判断"></a>正负极判断</h6><p>有阴影是负极</p><p>两级都是方块有一个是双杠线是负极</p><p>发光二极管的方孔是负极</p><h6 id="VDD-VEE-Vss意思"><a href="#VDD-VEE-Vss意思" class="headerlink" title="VDD,VEE,Vss意思"></a>VDD,VEE,Vss意思</h6><p>VDD=电源正极    VEE=模拟电路负极    Vss=数字电路负极</p><h6 id="电容ABCD型"><a href="#电容ABCD型" class="headerlink" title="电容ABCD型"></a>电容ABCD型</h6><p>代表大小尺寸，前面的英寸，冒号后面为毫米。及长 宽和高的具体尺寸</p><p>A(1206:3216-18)<br>B(1210:3528-21)<br>C(2312:6032-28)<br>D(2917:7343-31)</p><h6 id="常见贴片电阻封装"><a href="#常见贴片电阻封装" class="headerlink" title="常见贴片电阻封装"></a>常见贴片电阻封装</h6><p><a href="https://wenku.baidu.com/view/5ee37b10f242336c1fb95e2b.html" target="_blank" rel="noopener">https://wenku.baidu.com/view/5ee37b10f242336c1fb95e2b.html</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;常用快捷键，工具和元件零碎知识&quot;&gt;&lt;a href=&quot;#常用快捷键，工具和元件零碎知识&quot; class=&quot;headerlink&quot; title=&quot;常用快捷键，工具和元件零碎知识&quot;&gt;&lt;/a&gt;常用快捷键，工具和元件零碎知识&lt;/h4&gt;
-    
-    </summary>
-    
-    
-      <category term="电路设计" scheme="http://yoursite.com/tags/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>出手即证明</title>
-    <link href="http://yoursite.com/2019/09/06/%E5%87%BA%E6%89%8B%E5%8D%B3%E8%AF%81%E6%98%8E/"/>
-    <id>http://yoursite.com/2019/09/06/出手即证明/</id>
-    <published>2019-09-06T12:51:16.000Z</published>
-    <updated>2019-09-09T09:16:01.714Z</updated>
-    
-    <content type="html"><![CDATA[<p>你能从一片空白里</p><p>看到可能吗？</p><a id="more"></a><p>有些人要看到证据，</p><p>等有人做到了，才敢出手。</p><p>但那些第一个行动的人，他们等过吗？</p><p>他们直接出手！</p><p>不管有没有人做到过！</p><p>你能从一片空白里看到 可能吗？</p><p>​                                                        –2019年国际男篮世界杯NIKE宣传广告</p><img src="/2019/09/06/出手即证明/1.png" title="This is an image"><p><a href="https://www.bilibili.com/video/av66097981?from=search&amp;seid=10556162536052557404" target="_blank" rel="noopener">https://www.bilibili.com/video/av66097981?from=search&amp;seid=10556162536052557404</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;你能从一片空白里&lt;/p&gt;
-&lt;p&gt;看到可能吗？&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三极管运用：开关电机和电机正反转</title>
-    <link href="http://yoursite.com/2019/09/04/5.%E4%B8%89%E6%9E%81%E7%AE%A1%E8%BF%90%E7%94%A8%EF%BC%9A%E7%94%B5%E6%9C%BA%E6%AD%A3%E5%8F%8D%E8%BD%AC/"/>
-    <id>http://yoursite.com/2019/09/04/5.三极管运用：电机正反转/</id>
-    <published>2019-09-04T05:55:57.000Z</published>
-    <updated>2019-09-09T09:10:06.691Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="使用三极管专题相关知识搭建开关电机和电机正反转"><a href="#使用三极管专题相关知识搭建开关电机和电机正反转" class="headerlink" title="使用三极管专题相关知识搭建开关电机和电机正反转"></a>使用三极管专题相关知识搭建开关电机和电机正反转</h3><a id="more"></a><h5 id="运用NPN来搭建开关电源"><a href="#运用NPN来搭建开关电源" class="headerlink" title="运用NPN来搭建开关电源"></a>运用NPN来搭建开关电源</h5><img src="/2019/09/04/5.三极管运用：电机正反转/1.png" title="This is an image"><p>NPN发射极接地，D7，D12的亮灭是跟着电机的运转来。电机转，D7亮，D12灭；电机不转，D7灭，D12亮。</p><p>三极管导通的时候，集电极的电压为0.3v，电机和D7都导通，D10上侧的电压为1V=0.3+0.7（D8压降），为保证D10不通，所以串联一个D12的二极管，促使D10的电压不会在工作电压上，保证D10发光二极管熄灭。</p><p>三极管关断的时候，集电极是不导通的，再加上D8的二极管，电流只能从R18走，从而将D10点亮。</p><p>除此以外，因为电机在关断后电机作为电感元件，在断电之后会反向放电，所以Q11上的电压和电流有可能会过载，所以要并联一个二极管帮助放电</p><h5 id="运用NPN搭建开关电源"><a href="#运用NPN搭建开关电源" class="headerlink" title="运用NPN搭建开关电源"></a>运用NPN搭建开关电源</h5><img src="/2019/09/04/5.三极管运用：电机正反转/2.png" title="This is an image"><h5 id="电机正反转"><a href="#电机正反转" class="headerlink" title="电机正反转"></a>电机正反转</h5><img src="/2019/09/04/5.三极管运用：电机正反转/3.png" title="This is an image"><p>R12和C9，R30和C10组成滤波电路。放电电路可以继续用之前提到的放电电路，但是在这个电路中还有一种更加讨巧的办法，这次我们选用NPN，当另外一条线路开关关闭时的高电平来促使NPN管的导通，让电容放电，而开关关闭的那一条线则是正常充电。需要注意的一点是NPN管的集电极需要接在电容的上端，这样可以省个二极管</p><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;使用三极管专题相关知识搭建开关电机和电机正反转&quot;&gt;&lt;a href=&quot;#使用三极管专题相关知识搭建开关电机和电机正反转&quot; class=&quot;headerlink&quot; title=&quot;使用三极管专题相关知识搭建开关电机和电机正反转&quot;&gt;&lt;/a&gt;使用三极管专题相关知识搭建开关电机和电机正反转&lt;/h3&gt;
-    
-    </summary>
-    
-    
-      <category term="电路设计" scheme="http://yoursite.com/tags/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三极管专题</title>
-    <link href="http://yoursite.com/2019/08/29/3.%E4%B8%89%E6%9E%81%E7%AE%A1%E4%B8%93%E9%A2%98/"/>
-    <id>http://yoursite.com/2019/08/29/3.三极管专题/</id>
-    <published>2019-08-29T08:17:20.000Z</published>
-    <updated>2019-09-24T12:37:04.133Z</updated>
-    
-    <content type="html"><![CDATA[<p>先简单介绍一下三极管的几个特性。</p><a id="more"></a><h4 id="以NPN为例，下图是NPN典型工作电路图。"><a href="#以NPN为例，下图是NPN典型工作电路图。" class="headerlink" title="以NPN为例，下图是NPN典型工作电路图。"></a>以NPN为例，下图是NPN典型工作电路图。</h4><img src="/2019/08/29/3.三极管专题/1.png" title="This is an image"><p>1.Vbe&lt;0.7V（或者0.6v），处于截至状态</p><p>2.Vbe&gt;0.7V，出于放大或者饱和状态。处于哪一种状态取决于集电极与基极之间的电压，Vbc&lt;0处于放大状态。</p><p>3.Ice=β*Ib</p><p>4.饱和状态时，Vce=0.3V</p><p>ps：</p><h4 id="1-这里的Vbc为什么会小于0？"><a href="#1-这里的Vbc为什么会小于0？" class="headerlink" title="1.这里的Vbc为什么会小于0？"></a>1.这里的Vbc为什么会小于0？</h4><p>图中经过R1的电流会随着Ib变化，当Ib变大至一定的数值，Ice的电流也随之变大，R1上的电压随之变大，Vce的电压变小，自然有可能会进入饱和区。所以三极管在做开关作用的时候R1起着至关重要的作用，可以调节三极管进入饱和区的时间。</p><h4 id="2-R2-R3的作用？"><a href="#2-R2-R3的作用？" class="headerlink" title="2.R2,R3的作用？"></a>2.R2,R3的作用？</h4><p>（1）两个相互配合实现分压，为Vb设置电压</p><p>（2）R3作为下拉电阻，可以抗干扰</p><h4 id="3-NPN管接负载为什么通常接在集电极，而不是发射极？如下图"><a href="#3-NPN管接负载为什么通常接在集电极，而不是发射极？如下图" class="headerlink" title="3.NPN管接负载为什么通常接在集电极，而不是发射极？如下图"></a>3.NPN管接负载为什么通常接在集电极，而不是发射极？如下图</h4><img src="/2019/08/29/3.三极管专题/2.png" title="This is an image"><p>（1）接在发射极，无论Ib怎么变化，都不会使得三极管工作在饱和区，容易烧坏三极管。</p><p>（2）R1代表负载，则其上的额定电压是有区别的。举个例子，10个发光二极管，9个额定电压是3.3V，1个不太正常，工作在3.4V。若Vb的电压设置在1V，则9个可以发光，而3.4v的那个怎么都不会发光。所以接在发射极会影响Vb的设置。</p><h3 id="下面正式进入三极管的实际运用"><a href="#下面正式进入三极管的实际运用" class="headerlink" title="下面正式进入三极管的实际运用"></a>下面正式进入三极管的实际运用</h3><p>如下面两幅图，三极管常用的电路，基极作为控制信号，控制ce间的开闭。这是将三极管作为开关功能运用在电路中，R2的大小可让三极管快速进入饱和区，实现三极管在截至区和饱和区的来回切换。</p><img src="/2019/08/29/3.三极管专题/3.png" title="This is an image">    <img src="/2019/08/29/3.三极管专题/4.png" title="This is an image"><p>但是如上的两幅图都有一个问题，那就是在开关闭合和打开的时候，在基极会产生电压和电流的突变，这样的突变会影响后面的三极管，使之三极管上的电压和电流产生震荡，这是电路设计中不想出现的。所以还需要消抖电路，这在下一讲中去讨论。</p><p>但对PNP管还有一个问题，那就是这个开关最好不要接在地线上，而是接在火线上，这样比较安全。</p><p>所以PNP管想运用到实际，需再进行设计</p><img src="/2019/08/29/3.三极管专题/5.png" title="This is an image"><p>如上图，将开关接在火线上，NPN的基极电压要高于发射极，NPN导通。这时在其集电极有高电平电压或者是完全导通的0.3V ，都可以使得PNP管导通</p><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p><p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p><p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;先简单介绍一下三极管的几个特性。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="电路设计" scheme="http://yoursite.com/tags/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   

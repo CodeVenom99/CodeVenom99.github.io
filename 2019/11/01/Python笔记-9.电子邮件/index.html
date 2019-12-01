@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Python笔记-网络编程 | Code Venom&#39;s Blog</title>
+  <title>Python笔记-电子邮件 | Code Venom&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Python笔记-网络编程">
+  <meta name="description" content="Python笔记-电子邮件">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python笔记-网络编程">
-<meta property="og:url" content="http://yoursite.com/2019/11/01/Python笔记-网络编程/index.html">
+<meta property="og:title" content="Python笔记-电子邮件">
+<meta property="og:url" content="http://yoursite.com/2019/11/01/Python笔记-9.电子邮件/index.html">
 <meta property="og:site_name" content="Code Venom&#39;s Blog">
-<meta property="og:description" content="Python笔记-网络编程">
+<meta property="og:description" content="Python笔记-电子邮件">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-06T13:24:07.543Z">
+<meta property="og:updated_time" content="2019-11-06T13:09:14.682Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python笔记-网络编程">
-<meta name="twitter:description" content="Python笔记-网络编程">
+<meta name="twitter:title" content="Python笔记-电子邮件">
+<meta name="twitter:description" content="Python笔记-电子邮件">
   
     <link rel="alternative" href="/atom.xml" title="Code Venom&#39;s Blog" type="application/atom+xml">
   
@@ -157,19 +157,19 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Python笔记-网络编程" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Python笔记-9.电子邮件" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Python笔记-网络编程
+      Python笔记-电子邮件
     </h1>
   
 
         
-        <a href="/2019/11/01/Python笔记-网络编程/" class="archive-article-date">
+        <a href="/2019/11/01/Python笔记-9.电子邮件/" class="archive-article-date">
   	<time datetime="2019-11-01T08:42:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
 </a>
         
@@ -177,10 +177,10 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Python笔记-网络编程</p>
+        <p>Python笔记-电子邮件</p>
 <a id="more"></a>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">客户端</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">client=socket.socket()<span class="comment">#生成socket连接对象</span></span><br><span class="line">client.connect((<span class="string">"localhost"</span>,<span class="number">6969</span>))<span class="comment">#和目标主机建立连接</span></span><br><span class="line">client.send(<span class="string">"hello word"</span>.encode())<span class="comment">#字符串转二进制，发送数据</span></span><br><span class="line">client.close()<span class="comment">#关闭</span></span><br><span class="line"></span><br><span class="line">服务器</span><br><span class="line"><span class="keyword">import</span> socket</span><br><span class="line">server=socket.socket()</span><br><span class="line">server.bind((<span class="string">"localhost"</span>,<span class="number">6969</span>))</span><br><span class="line">server.listen()<span class="comment">#监听</span></span><br><span class="line">print(<span class="string">"准备接电话了"</span>)</span><br><span class="line">con,addr=server.accept()<span class="comment">#等待消息</span></span><br><span class="line">print(con,addr)</span><br><span class="line">data=con.recv(<span class="number">1024</span>)</span><br><span class="line">print(<span class="string">"接收到消息："</span>,data)</span><br><span class="line">server.close()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br><span class="line"><span class="comment">#smtp.qq.com</span></span><br><span class="line">msg_from=<span class="string">"1060401004@qq.com"</span><span class="comment">#发送方</span></span><br><span class="line">pwd=<span class="string">"oaiihqjgfyfobfic"</span><span class="comment">#授权码</span></span><br><span class="line">to=<span class="string">"e1060401004@163.com"</span><span class="comment">#接收方</span></span><br><span class="line"><span class="comment">#主题和内容</span></span><br><span class="line">subject=<span class="string">"python发送的邮件"</span></span><br><span class="line">content=<span class="string">"开始直播了"</span></span><br><span class="line"><span class="comment">#构造邮件</span></span><br><span class="line">msg=MIMEText(content)</span><br><span class="line">msg[<span class="string">"Subject"</span>]=subject</span><br><span class="line">msg[<span class="string">"From"</span>]=msg_from</span><br><span class="line">msg[<span class="string">"To"</span>]=to</span><br><span class="line"><span class="comment">#发送邮件</span></span><br><span class="line">ss=smtplib.SMTP_SSL(<span class="string">"smtp.qq.com"</span>,<span class="number">465</span>)</span><br><span class="line">ss.login(msg_from,pwd)</span><br><span class="line">ss.sendmail(msg_from,to,msg.as_string())</span><br></pre></td></tr></table></figure>
 
 
       
@@ -272,7 +272,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/01/Python笔记-网络编程/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/01/Python笔记-9.电子邮件/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,18 +286,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/11/01/Python笔记-文件读写/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/11/01/Python笔记-6.面向对象/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Python笔记-文件读写
+          Python笔记-面向对象
         
       </div>
     </a>
   
   
-    <a href="/2019/11/01/Python笔记-电子邮件/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Python笔记-电子邮件</div>
+    <a href="/2019/11/01/Python笔记-4.函数与模块/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python笔记-函数与模块</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -445,6 +445,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
@@ -453,7 +457,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+                <a href="javascript:void(0)" class="js-tag color5">软件安装</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -462,10 +466,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">软件安装</a>
               </li>
              
               <li class="article-tag-list-item">
