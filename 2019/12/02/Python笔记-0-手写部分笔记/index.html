@@ -6,24 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>对第一课总结:线性电源 | Code Venom&#39;s Blog</title>
+  <title>Python笔记-0.手写部分笔记 | Code Venom&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="运用第一节所学到的只是搭建具有实际意义的电路:线性电源">
-<meta name="keywords" content="电路设计">
+  <meta name="description" content="Python笔记-0.手写部分笔记">
+<meta name="keywords" content="Python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对第一课总结:线性电源">
-<meta property="og:url" content="http://yoursite.com/2019/08/28/2.对第一课总结/index.html">
+<meta property="og:title" content="Python笔记-0.手写部分笔记">
+<meta property="og:url" content="http://yoursite.com/2019/12/02/Python笔记-0-手写部分笔记/index.html">
 <meta property="og:site_name" content="Code Venom&#39;s Blog">
-<meta property="og:description" content="运用第一节所学到的只是搭建具有实际意义的电路:线性电源">
+<meta property="og:description" content="Python笔记-0.手写部分笔记">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/2019/08/28/2.对第一课总结/1.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/28/2.对第一课总结/2.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/28/2.对第一课总结/2.png">
-<meta property="og:updated_time" content="2019-08-31T13:28:59.772Z">
+<meta property="og:image" content="http://yoursite.com/2019/12/02/Python笔记-0-手写部分笔记/python-1.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/12/02/Python笔记-0-手写部分笔记/python-2.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/12/02/Python笔记-0-手写部分笔记/python-3.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/12/02/Python笔记-0-手写部分笔记/python-4.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/12/02/Python笔记-0-手写部分笔记/python-5.jpg">
+<meta property="og:updated_time" content="2019-12-02T03:39:44.497Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对第一课总结:线性电源">
-<meta name="twitter:description" content="运用第一节所学到的只是搭建具有实际意义的电路:线性电源">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/28/2.对第一课总结/1.png">
+<meta name="twitter:title" content="Python笔记-0.手写部分笔记">
+<meta name="twitter:description" content="Python笔记-0.手写部分笔记">
+<meta name="twitter:image" content="http://yoursite.com/2019/12/02/Python笔记-0-手写部分笔记/python-1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Code Venom&#39;s Blog" type="application/atom+xml">
   
@@ -161,134 +163,38 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2.对第一课总结" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Python笔记-0-手写部分笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      对第一课总结:线性电源
+      Python笔记-0.手写部分笔记
     </h1>
   
 
         
-        <a href="/2019/08/28/2.对第一课总结/" class="archive-article-date">
-  	<time datetime="2019-08-28T12:53:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-28</time>
+        <a href="/2019/12/02/Python笔记-0-手写部分笔记/" class="archive-article-date">
+  	<time datetime="2019-12-02T03:37:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>运用第一节所学到的只是搭建具有实际意义的电路:线性电源</p>
+        <p>Python笔记-0.手写部分笔记</p>
 <a id="more"></a>
 
-<h3 id="使用整流桥和稳压模块搭建"><a href="#使用整流桥和稳压模块搭建" class="headerlink" title="使用整流桥和稳压模块搭建"></a>使用整流桥和稳压模块搭建</h3><p><strong>1.首先，选择整流桥：</strong></p>
-<p>反向电压 &gt;16 * 2√2=45</p>
-<p>正向电流 &gt;10mA /2=5mA</p>
-<p>查询KBJ40xx手册，选择KBJ4005</p>
-<p><strong>2.选择C1电解电容</strong></p>
-<p>电压 &gt; 23v*1.5=34.5v</p>
-<p>电容值：（0.01A /（（23v*0.05） *100HZ）） *1000000=87uF</p>
-<p>实际选择电容值为计算的5-10倍，所以选择470uF/35v</p>
-<p><strong>3.选择C2瓷片电容</strong></p>
-<p>直接104（0.1uF）瓷片电容</p>
-<p><strong>4.选择C3电解电容</strong></p>
-<p>因为后面的负载电流不超过100mA，所以直接 330uF 电解电容</p>
-<p><strong>5.选择R1电阻</strong></p>
-<p>R1电阻用来分压，R=（5V - 3.3V）/ 0.005A=340R</p>
-<p>实际选择330R</p>
-<p><strong>6.最后计算LM7805的功率不超过1w</strong></p>
-<p>（23v-5v）* 0.01A=0.18w</p>
-<img src="/2019/08/28/2.对第一课总结/1.png" title="This is an image">
+<img src="/2019/12/02/Python笔记-0-手写部分笔记/python-1.jpg" title="This is an image">
 
+<img src="/2019/12/02/Python笔记-0-手写部分笔记/python-2.jpg" title="This is an image">
 
+<img src="/2019/12/02/Python笔记-0-手写部分笔记/python-3.jpg" title="This is an image">
 
-<h3 id="使用分离元器件搭建"><a href="#使用分离元器件搭建" class="headerlink" title="使用分离元器件搭建"></a>使用分离元器件搭建</h3><p><strong>1.首先，选择搭建整流桥所要的二极管：</strong></p>
-<p>单个元件反向耐压 &gt; 16v * √2=22.6v</p>
-<p>单个元件正向电流 &gt; 10mA /2=5mA</p>
-<p>最后选择1N4148</p>
-<p><strong>2.稳压管</strong></p>
-<p>算上三极管be间的压降，可以选择5.6v稳压管。但是若想保证其be将电压大于开启电压，最好串联一个二极管，来提高b点的电压，实质可以达到5.7v以上。所以综合以上，选择1N4733+1N4148</p>
-<p><strong>3.R1电阻</strong></p>
-<p>限流，使得稳压管上的电流＞4mA(稳压管2mA + Ibe的2mA)，电阻值  &lt;  (23V-6V)/0.004A=4K2</p>
-<p>选4K3</p>
-<img src="/2019/08/28/2.对第一课总结/2.png" title="This is an image">
+<img src="/2019/12/02/Python笔记-0-手写部分笔记/python-4.jpg" title="This is an image">
 
-
-
-
-
-
-
-
-
-
-
-
-
-<img src="/2019/08/28/2.对第一课总结/2.png" title="This is an image">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<p>以上知识全由张飞老师教授，以下链接是课程链接，希望大家支持正版</p>
-<p><a href="https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop" target="_blank" rel="noopener">https://fcsddz.taobao.com/category.htm?spm=2013.1.w5001-21762029918.7.7b707925arHW2i&amp;search=y&amp;scene=taobao_shop</a></p>
-
+<img src="/2019/12/02/Python笔记-0-手写部分笔记/python-5.jpg" title="This is an image">
       
 
       
@@ -322,7 +228,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">电路设计</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -378,7 +284,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/28/2.对第一课总结/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/02/Python笔记-0-手写部分笔记/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -392,18 +298,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/08/29/4.消抖和电容放电电路/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          消抖和电容放电电路
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/08/27/1.整流,稳压和滤波电路/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">整流，稳压和滤波电路</div>
+    <a href="/2019/11/26/Python笔记-11.MySQL/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python笔记-MySQL</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -430,7 +327,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用整流桥和稳压模块搭建"><span class="toc-number">1.</span> <span class="toc-text">使用整流桥和稳压模块搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用分离元器件搭建"><span class="toc-number">2.</span> <span class="toc-text">使用分离元器件搭建</span></a></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
