@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-17T05:48:31.318Z</updated>
+  <updated>2020-01-13T12:16:41.789Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux下安装arm-none-eabi-gcc交叉编译器</title>
+    <link href="http://yoursite.com/2020/01/13/linux%E4%B8%8B%E5%AE%89%E8%A3%85arm-none-eabi-gcc%E4%BA%A4%E5%8F%89%E7%BC%96%E8%AF%91%E5%99%A8/"/>
+    <id>http://yoursite.com/2020/01/13/linux下安装arm-none-eabi-gcc交叉编译器/</id>
+    <published>2020-01-13T11:56:58.000Z</published>
+    <updated>2020-01-13T12:16:41.789Z</updated>
+    
+    <content type="html"><![CDATA[<p>linux下安装arm-none-eabi-gcc交叉编译器</p><a id="more"></a><h5 id="在该网址上下载压缩包"><a href="#在该网址上下载压缩包" class="headerlink" title="在该网址上下载压缩包"></a>在该网址上下载压缩包</h5><p><a href="https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/7-2017q4/gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2" target="_blank" rel="noopener">https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/7-2017q4/gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2</a></p><h5 id="将下载好的文件放入linux的tmp文件夹下"><a href="#将下载好的文件放入linux的tmp文件夹下" class="headerlink" title="将下载好的文件放入linux的tmp文件夹下"></a>将下载好的文件放入linux的tmp文件夹下</h5><h5 id="先查看一下opt中和gcc有关的文件"><a href="#先查看一下opt中和gcc有关的文件" class="headerlink" title="先查看一下opt中和gcc有关的文件"></a>先查看一下opt中和gcc有关的文件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /opt/gcc* -l</span><br></pre></td></tr></table></figure><h5 id="解压文件到opt文件夹下"><a href="#解压文件到opt文件夹下" class="headerlink" title="解压文件到opt文件夹下"></a>解压文件到opt文件夹下</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo tar -jxf /tmp/gcc-arm-none-eabi-7-2017-q4-major-linux.tar.bz2 -C /opt/</span><br></pre></td></tr></table></figure><h5 id="再次查看一下opt中和gcc有关的文件，看是否有变化"><a href="#再次查看一下opt中和gcc有关的文件，看是否有变化" class="headerlink" title="再次查看一下opt中和gcc有关的文件，看是否有变化"></a>再次查看一下opt中和gcc有关的文件，看是否有变化</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ls /opt/gcc* -l</span><br><span class="line"></span><br><span class="line">总用量 16</span><br><span class="line">drwxr-xr-x 6 root root 4096 12月  1  2017 arm-none-eabi</span><br><span class="line">drwxr-xr-x 2 root root 4096 12月  1  2017 bin</span><br><span class="line">drwxr-xr-x 3 root root 4096 12月  1  2017 lib</span><br><span class="line">drwxr-xr-x 4 root root 4096 12月  1  2017 share</span><br></pre></td></tr></table></figure><h5 id="添加源"><a href="#添加源" class="headerlink" title="添加源"></a>添加源</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gedit ~/.bashrc</span><br></pre></td></tr></table></figure><h5 id="在打开的文件最后加上下面语句"><a href="#在打开的文件最后加上下面语句" class="headerlink" title="在打开的文件最后加上下面语句"></a>在打开的文件最后加上下面语句</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/opt/gcc-arm-none-eabi-7-2017-q4-major/bin:$PATH</span><br></pre></td></tr></table></figure><h5 id="查看是否添加成功"><a href="#查看是否添加成功" class="headerlink" title="查看是否添加成功"></a>查看是否添加成功</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $PATH</span><br></pre></td></tr></table></figure><h5 id="检查是否安装成功"><a href="#检查是否安装成功" class="headerlink" title="检查是否安装成功"></a>检查是否安装成功</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">arm-none-eabi-gcc --version</span><br><span class="line"></span><br><span class="line">arm-none-eabi-gcc (GNU Tools for Arm Embedded Processors 7-2017-q4-major) 7.2.1 20170904 (release) [ARM/embedded-7-branch revision 255204]</span><br><span class="line">Copyright (C) 2017 Free Software Foundation, Inc.</span><br><span class="line">This is free software; see the source for copying conditions.  There is NO</span><br><span class="line">warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span><br></pre></td></tr></table></figure><p><a href="https://www.cnblogs.com/cporoske/p/11630426.html" target="_blank" rel="noopener">https://www.cnblogs.com/cporoske/p/11630426.html</a></p><p><a href="https://jingyan.baidu.com/article/eae078276fe0781fec5485e9.html" target="_blank" rel="noopener">https://jingyan.baidu.com/article/eae078276fe0781fec5485e9.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;linux下安装arm-none-eabi-gcc交叉编译器&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="PX4" scheme="http://yoursite.com/tags/PX4/"/>
+    
+  </entry>
   
   <entry>
     <title>Python笔记-Numpy</title>
@@ -197,46 +217,6 @@
   </entry>
   
   <entry>
-    <title>Python笔记-文件读写</title>
-    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-5.%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/"/>
-    <id>http://yoursite.com/2019/11/01/Python笔记-5.文件读写/</id>
-    <published>2019-11-01T08:42:57.000Z</published>
-    <updated>2019-11-02T06:40:13.615Z</updated>
-    
-    <content type="html"><![CDATA[<p>Python笔记-文件读写</p><a id="more"></a><h5 id="内置模块"><a href="#内置模块" class="headerlink" title="内置模块"></a>内置模块</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.system(<span class="string">r"C:\Windows\System32\mspaint.exe"</span>)<span class="comment">#打开画图工具</span></span><br><span class="line">os.rename(<span class="string">r"E:\1.txt"</span>,<span class="string">r"E:\2.txt"</span>)</span><br></pre></td></tr></table></figure><h5 id="文件读-文本文件txt"><a href="#文件读-文本文件txt" class="headerlink" title="文件读(文本文件txt)"></a>文件读(文本文件txt)</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"r"</span>)<span class="comment">#r--read读取 fh1--文件句柄</span></span><br><span class="line">data_1=fh1.read()</span><br><span class="line">print(data)</span><br><span class="line">fh1.close()<span class="comment">#文件操作完成之后一定要关闭文件IO资源</span></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"r"</span>)</span><br><span class="line">data_1=fh1.readline()<span class="comment">#每次读取一行</span></span><br><span class="line">data_2=fh1.readline()<span class="comment">#再运行一次读取第二行</span></span><br><span class="line">print(data_1)<span class="comment">#文件的第一行</span></span><br><span class="line">print(data_2)<span class="comment">#文件的第二行</span></span><br><span class="line">fh1.close()</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"r"</span>)</span><br><span class="line">data_1=fh1.lines()<span class="comment">#将文件每一行当成一个元素装入列表</span></span><br><span class="line">print(data[<span class="number">5</span>])<span class="comment">#打印第六行</span></span><br><span class="line">fh1.close()<span class="comment">#文件操作完成之后一定要关闭文件IO资源</span></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"r"</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> fh1</span><br><span class="line">print(i)</span><br><span class="line">fh1.close()</span><br></pre></td></tr></table></figure><h5 id="文件写（文本文件txt）"><a href="#文件写（文本文件txt）" class="headerlink" title="文件写（文本文件txt）"></a>文件写（文本文件txt）</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"w"</span>)<span class="comment">#w--写入数据</span></span><br><span class="line"><span class="comment">#如果1.txt文件存在则擦除原来的数据写入新的数据，如果没有该文件则创建这个文件</span></span><br><span class="line">fh1.write(<span class="string">"hello"</span>)</span><br><span class="line">fh1.close()</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如果不想擦除，再写入</span><br><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"a"</span>)<span class="comment">#追加写入,即在文件的末尾写入</span></span><br><span class="line">data=<span class="string">"--作者"</span></span><br><span class="line">fh1.write(data)</span><br><span class="line">fh1.close()</span><br></pre></td></tr></table></figure><h5 id="文件读-二进制文件-除了txt以外的文件"><a href="#文件读-二进制文件-除了txt以外的文件" class="headerlink" title="文件读(二进制文件=除了txt以外的文件)"></a>文件读(二进制文件=除了txt以外的文件)</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将1.png复制给2.png</span></span><br><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.png"</span>，<span class="string">"rb"</span>)<span class="comment">#rb--read bite</span></span><br><span class="line">data=fh1.read</span><br><span class="line">print(data)</span><br><span class="line">fh2=open(<span class="string">r"C:\Windows\System32\2.png"</span>，<span class="string">"wb"</span>)</span><br><span class="line">fh2.write(data)</span><br><span class="line">fh1.close()</span><br><span class="line">fh2.close()</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Python笔记-文件读写&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python笔记-函数与模块</title>
-    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-4.%E5%87%BD%E6%95%B0%E4%B8%8E%E6%A8%A1%E5%9D%97/"/>
-    <id>http://yoursite.com/2019/11/01/Python笔记-4.函数与模块/</id>
-    <published>2019-11-01T08:42:57.000Z</published>
-    <updated>2019-12-01T11:52:06.223Z</updated>
-    
-    <content type="html"><![CDATA[<p>Python笔记-函数与模块</p><a id="more"></a><h5 id="初识函数和return语句"><a href="#初识函数和return语句" class="headerlink" title="初识函数和return语句"></a>初识函数和return语句</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(a,b,c,d)</span>:</span></span><br><span class="line">e=a+b+c+d</span><br><span class="line"><span class="keyword">return</span> e</span><br><span class="line">print(<span class="string">"本次结果："</span>,add(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>))</span><br></pre></td></tr></table></figure><h5 id="参数传入"><a href="#参数传入" class="headerlink" title="参数传入"></a>参数传入</h5><h6 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def add(a,b,c=2):</span><br><span class="line">e=a+b+c</span><br><span class="line">return e</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2))</span><br><span class="line">结果：</span><br><span class="line">本次结果：5</span><br><span class="line"></span><br><span class="line">修改默认参数</span><br><span class="line">def add(a,b,c=2):</span><br><span class="line">e=a+b+c</span><br><span class="line">return e</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2,c=4))</span><br><span class="line">结果：</span><br><span class="line">本次结果：7</span><br></pre></td></tr></table></figure><h6 id="参数未知"><a href="#参数未知" class="headerlink" title="参数未知"></a>参数未知</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def add(*args):</span><br><span class="line">print(args)</span><br><span class="line">add(1,2,4,5)</span><br><span class="line">结果：</span><br><span class="line">本次结果：(1,2,4,5)</span><br><span class="line"></span><br><span class="line">def add(*args):</span><br><span class="line">summ=0</span><br><span class="line">for i in args:</span><br><span class="line">summ=summ+i</span><br><span class="line">return summ</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2,4,5))</span><br><span class="line">结果：</span><br><span class="line">本次结果：12</span><br></pre></td></tr></table></figure><h5 id="模块导入"><a href="#模块导入" class="headerlink" title="模块导入"></a>模块导入</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import 模块名</span><br><span class="line">from 模块名1 import 模块名2</span><br></pre></td></tr></table></figure><p>安装第三方模块</p><p>cmd窗口依次输入</p><p>python -m pip install –upgrade pip#更新pip工具</p><p>pip install 模块名</p><p>pip uninstall 模块名</p><p>pip list #查看所有安装的第三方模块</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Python笔记-函数与模块&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Python笔记-网络编程</title>
     <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-8.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
     <id>http://yoursite.com/2019/11/01/Python笔记-8.网络编程/</id>
@@ -248,46 +228,6 @@
     <summary type="html">
     
       &lt;p&gt;Python笔记-网络编程&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python笔记-选择结构</title>
-    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-2.%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/"/>
-    <id>http://yoursite.com/2019/11/01/Python笔记-2.选择结构/</id>
-    <published>2019-11-01T08:42:57.000Z</published>
-    <updated>2019-12-01T12:22:56.877Z</updated>
-    
-    <content type="html"><![CDATA[<p>Python笔记-选择结构</p><a id="more"></a><h5 id="elif多条件判断"><a href="#elif多条件判断" class="headerlink" title="elif多条件判断"></a>elif多条件判断</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = 88</span><br><span class="line">if a &gt;= 90:</span><br><span class="line">    print(&quot;优秀&quot;)</span><br><span class="line">elif a &gt;=80:</span><br><span class="line">    print(&quot;良好&quot;)</span><br><span class="line">elif a &gt;= 70:</span><br><span class="line">    print(&quot;中等&quot;)</span><br><span class="line">elif a &gt;= 60:</span><br><span class="line">    print(&quot;及格&quot;)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Python笔记-选择结构&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python笔记-电子邮件</title>
-    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-9.%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/"/>
-    <id>http://yoursite.com/2019/11/01/Python笔记-9.电子邮件/</id>
-    <published>2019-11-01T08:42:57.000Z</published>
-    <updated>2019-11-06T13:09:14.682Z</updated>
-    
-    <content type="html"><![CDATA[<p>Python笔记-电子邮件</p><a id="more"></a><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br><span class="line"><span class="comment">#smtp.qq.com</span></span><br><span class="line">msg_from=<span class="string">"1060401004@qq.com"</span><span class="comment">#发送方</span></span><br><span class="line">pwd=<span class="string">"oaiihqjgfyfobfic"</span><span class="comment">#授权码</span></span><br><span class="line">to=<span class="string">"e1060401004@163.com"</span><span class="comment">#接收方</span></span><br><span class="line"><span class="comment">#主题和内容</span></span><br><span class="line">subject=<span class="string">"python发送的邮件"</span></span><br><span class="line">content=<span class="string">"开始直播了"</span></span><br><span class="line"><span class="comment">#构造邮件</span></span><br><span class="line">msg=MIMEText(content)</span><br><span class="line">msg[<span class="string">"Subject"</span>]=subject</span><br><span class="line">msg[<span class="string">"From"</span>]=msg_from</span><br><span class="line">msg[<span class="string">"To"</span>]=to</span><br><span class="line"><span class="comment">#发送邮件</span></span><br><span class="line">ss=smtplib.SMTP_SSL(<span class="string">"smtp.qq.com"</span>,<span class="number">465</span>)</span><br><span class="line">ss.login(msg_from,pwd)</span><br><span class="line">ss.sendmail(msg_from,to,msg.as_string())</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Python笔记-电子邮件&lt;/p&gt;
     
     </summary>
     
@@ -337,6 +277,86 @@
   </entry>
   
   <entry>
+    <title>Python笔记-函数与模块</title>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-4.%E5%87%BD%E6%95%B0%E4%B8%8E%E6%A8%A1%E5%9D%97/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-4.函数与模块/</id>
+    <published>2019-11-01T08:42:57.000Z</published>
+    <updated>2019-12-01T11:52:06.223Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python笔记-函数与模块</p><a id="more"></a><h5 id="初识函数和return语句"><a href="#初识函数和return语句" class="headerlink" title="初识函数和return语句"></a>初识函数和return语句</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(a,b,c,d)</span>:</span></span><br><span class="line">e=a+b+c+d</span><br><span class="line"><span class="keyword">return</span> e</span><br><span class="line">print(<span class="string">"本次结果："</span>,add(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>))</span><br></pre></td></tr></table></figure><h5 id="参数传入"><a href="#参数传入" class="headerlink" title="参数传入"></a>参数传入</h5><h6 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def add(a,b,c=2):</span><br><span class="line">e=a+b+c</span><br><span class="line">return e</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2))</span><br><span class="line">结果：</span><br><span class="line">本次结果：5</span><br><span class="line"></span><br><span class="line">修改默认参数</span><br><span class="line">def add(a,b,c=2):</span><br><span class="line">e=a+b+c</span><br><span class="line">return e</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2,c=4))</span><br><span class="line">结果：</span><br><span class="line">本次结果：7</span><br></pre></td></tr></table></figure><h6 id="参数未知"><a href="#参数未知" class="headerlink" title="参数未知"></a>参数未知</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def add(*args):</span><br><span class="line">print(args)</span><br><span class="line">add(1,2,4,5)</span><br><span class="line">结果：</span><br><span class="line">本次结果：(1,2,4,5)</span><br><span class="line"></span><br><span class="line">def add(*args):</span><br><span class="line">summ=0</span><br><span class="line">for i in args:</span><br><span class="line">summ=summ+i</span><br><span class="line">return summ</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2,4,5))</span><br><span class="line">结果：</span><br><span class="line">本次结果：12</span><br></pre></td></tr></table></figure><h5 id="模块导入"><a href="#模块导入" class="headerlink" title="模块导入"></a>模块导入</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import 模块名</span><br><span class="line">from 模块名1 import 模块名2</span><br></pre></td></tr></table></figure><p>安装第三方模块</p><p>cmd窗口依次输入</p><p>python -m pip install –upgrade pip#更新pip工具</p><p>pip install 模块名</p><p>pip uninstall 模块名</p><p>pip list #查看所有安装的第三方模块</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python笔记-函数与模块&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python笔记-选择结构</title>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-2.%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-2.选择结构/</id>
+    <published>2019-11-01T08:42:57.000Z</published>
+    <updated>2019-12-01T12:22:56.877Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python笔记-选择结构</p><a id="more"></a><h5 id="elif多条件判断"><a href="#elif多条件判断" class="headerlink" title="elif多条件判断"></a>elif多条件判断</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a = 88</span><br><span class="line">if a &gt;= 90:</span><br><span class="line">    print(&quot;优秀&quot;)</span><br><span class="line">elif a &gt;=80:</span><br><span class="line">    print(&quot;良好&quot;)</span><br><span class="line">elif a &gt;= 70:</span><br><span class="line">    print(&quot;中等&quot;)</span><br><span class="line">elif a &gt;= 60:</span><br><span class="line">    print(&quot;及格&quot;)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python笔记-选择结构&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python笔记-电子邮件</title>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-9.%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-9.电子邮件/</id>
+    <published>2019-11-01T08:42:57.000Z</published>
+    <updated>2019-11-06T13:09:14.682Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python笔记-电子邮件</p><a id="more"></a><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> smtplib</span><br><span class="line"><span class="keyword">from</span> email.mime.text <span class="keyword">import</span> MIMEText</span><br><span class="line"><span class="comment">#smtp.qq.com</span></span><br><span class="line">msg_from=<span class="string">"1060401004@qq.com"</span><span class="comment">#发送方</span></span><br><span class="line">pwd=<span class="string">"oaiihqjgfyfobfic"</span><span class="comment">#授权码</span></span><br><span class="line">to=<span class="string">"e1060401004@163.com"</span><span class="comment">#接收方</span></span><br><span class="line"><span class="comment">#主题和内容</span></span><br><span class="line">subject=<span class="string">"python发送的邮件"</span></span><br><span class="line">content=<span class="string">"开始直播了"</span></span><br><span class="line"><span class="comment">#构造邮件</span></span><br><span class="line">msg=MIMEText(content)</span><br><span class="line">msg[<span class="string">"Subject"</span>]=subject</span><br><span class="line">msg[<span class="string">"From"</span>]=msg_from</span><br><span class="line">msg[<span class="string">"To"</span>]=to</span><br><span class="line"><span class="comment">#发送邮件</span></span><br><span class="line">ss=smtplib.SMTP_SSL(<span class="string">"smtp.qq.com"</span>,<span class="number">465</span>)</span><br><span class="line">ss.login(msg_from,pwd)</span><br><span class="line">ss.sendmail(msg_from,to,msg.as_string())</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python笔记-电子邮件&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python笔记-文件读写</title>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-5.%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-5.文件读写/</id>
+    <published>2019-11-01T08:42:57.000Z</published>
+    <updated>2019-11-02T06:40:13.615Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python笔记-文件读写</p><a id="more"></a><h5 id="内置模块"><a href="#内置模块" class="headerlink" title="内置模块"></a>内置模块</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">os.system(<span class="string">r"C:\Windows\System32\mspaint.exe"</span>)<span class="comment">#打开画图工具</span></span><br><span class="line">os.rename(<span class="string">r"E:\1.txt"</span>,<span class="string">r"E:\2.txt"</span>)</span><br></pre></td></tr></table></figure><h5 id="文件读-文本文件txt"><a href="#文件读-文本文件txt" class="headerlink" title="文件读(文本文件txt)"></a>文件读(文本文件txt)</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"r"</span>)<span class="comment">#r--read读取 fh1--文件句柄</span></span><br><span class="line">data_1=fh1.read()</span><br><span class="line">print(data)</span><br><span class="line">fh1.close()<span class="comment">#文件操作完成之后一定要关闭文件IO资源</span></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"r"</span>)</span><br><span class="line">data_1=fh1.readline()<span class="comment">#每次读取一行</span></span><br><span class="line">data_2=fh1.readline()<span class="comment">#再运行一次读取第二行</span></span><br><span class="line">print(data_1)<span class="comment">#文件的第一行</span></span><br><span class="line">print(data_2)<span class="comment">#文件的第二行</span></span><br><span class="line">fh1.close()</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"r"</span>)</span><br><span class="line">data_1=fh1.lines()<span class="comment">#将文件每一行当成一个元素装入列表</span></span><br><span class="line">print(data[<span class="number">5</span>])<span class="comment">#打印第六行</span></span><br><span class="line">fh1.close()<span class="comment">#文件操作完成之后一定要关闭文件IO资源</span></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"r"</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> fh1</span><br><span class="line">print(i)</span><br><span class="line">fh1.close()</span><br></pre></td></tr></table></figure><h5 id="文件写（文本文件txt）"><a href="#文件写（文本文件txt）" class="headerlink" title="文件写（文本文件txt）"></a>文件写（文本文件txt）</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"w"</span>)<span class="comment">#w--写入数据</span></span><br><span class="line"><span class="comment">#如果1.txt文件存在则擦除原来的数据写入新的数据，如果没有该文件则创建这个文件</span></span><br><span class="line">fh1.write(<span class="string">"hello"</span>)</span><br><span class="line">fh1.close()</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如果不想擦除，再写入</span><br><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.txt"</span>，<span class="string">"a"</span>)<span class="comment">#追加写入,即在文件的末尾写入</span></span><br><span class="line">data=<span class="string">"--作者"</span></span><br><span class="line">fh1.write(data)</span><br><span class="line">fh1.close()</span><br></pre></td></tr></table></figure><h5 id="文件读-二进制文件-除了txt以外的文件"><a href="#文件读-二进制文件-除了txt以外的文件" class="headerlink" title="文件读(二进制文件=除了txt以外的文件)"></a>文件读(二进制文件=除了txt以外的文件)</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#将1.png复制给2.png</span></span><br><span class="line">fh1=open(<span class="string">r"C:\Windows\System32\1.png"</span>，<span class="string">"rb"</span>)<span class="comment">#rb--read bite</span></span><br><span class="line">data=fh1.read</span><br><span class="line">print(data)</span><br><span class="line">fh2=open(<span class="string">r"C:\Windows\System32\2.png"</span>，<span class="string">"wb"</span>)</span><br><span class="line">fh2.write(data)</span><br><span class="line">fh1.close()</span><br><span class="line">fh2.close()</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python笔记-文件读写&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>sublime</title>
     <link href="http://yoursite.com/2019/10/30/sublime/"/>
     <id>http://yoursite.com/2019/10/30/sublime/</id>
@@ -376,33 +396,6 @@
     
     
       <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>6.半波整流电路</title>
-    <link href="http://yoursite.com/2019/10/25/6.%E4%BA%A4%E6%B5%81%E7%94%B5%E8%BD%AC%E7%9B%B4%E6%B5%81%E7%A8%B3%E5%8E%8B%E7%94%B5%E8%B7%AF/"/>
-    <id>http://yoursite.com/2019/10/25/6.交流电转直流稳压电路/</id>
-    <published>2019-10-25T13:05:21.000Z</published>
-    <updated>2019-10-27T08:19:47.629Z</updated>
-    
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-
-
-
-      
-    
-    </summary>
-    
-    
-      <category term="电路设计" scheme="http://yoursite.com/tags/%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
