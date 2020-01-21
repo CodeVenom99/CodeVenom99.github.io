@@ -154,6 +154,94 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Makefile语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/18/Makefile语法/">Makefile语法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/01/18/Makefile语法/" class="archive-article-date">
+  	<time datetime="2020-01-18T14:56:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p> 以下的各代码段都是实现相同功能：将文件夹下的  .c   全部编译但不链接为  .o的目标文件  ，再将  .o文件变为可执行文件main</p>
+<p>总结如下几点：</p>
+<p>1.目标：依赖文件    目标的名字可以随便写，但是依赖文件必须是对的</p>
+<p>2.如果想用模式规则，则必须目标和依赖文件都是%（出现就要出现一对%）否则make就对应不了，会报错。这是因为模式规则会让依赖文件与目标一一对应，只出现一个%还怎么对应？</p>
+<p>3.</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#Makefile 变量的使用</span></span><br><span class="line"><span class="comment">#蓝色字体都是GUNmake的命令（规则）</span></span><br><span class="line"><span class="comment">#紫色字体为shell的命令</span></span><br><span class="line">objects=main.o input.o calcu.o</span><br><span class="line"></span><br><span class="line"><span class="section">main: <span class="variable">$(objects)</span></span></span><br><span class="line">    gcc -o main <span class="variable">$(objects)</span>		<span class="comment">#.o变成可执行文件main</span></span><br><span class="line"><span class="section">.PHONT:clean    #将clean设置为伪命令，伪命令用处在于避免同名的clean文件干扰&gt;    </span></span><br><span class="line">				<span class="comment">#到make clean，有了伪命令后，make clean只会执行shell里的clean</span></span><br><span class="line"><span class="section">%.o: %.c</span></span><br><span class="line">     gcc -c <span class="variable">$&lt;</span>	<span class="comment">#将.c变成.o</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm *.o</span><br><span class="line">    rm main</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">objects=main.o input.o calcu.o</span><br><span class="line">objects_1=main.c input.c calcu.c</span><br><span class="line"><span class="section">main_1:</span></span><br><span class="line">	gcc -c <span class="variable">$(objects_1)</span></span><br><span class="line">    gcc -o main <span class="variable">$(objects)</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm *.o</span><br><span class="line">    rm main</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">objects=main.o input.o calcu.o</span><br><span class="line">objects_1=main.c input.c calcu.c</span><br><span class="line"><span class="section">main_1:</span></span><br><span class="line">    gcc -c *.c</span><br><span class="line">    gcc -o main *.o</span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm *.o</span><br><span class="line">    rm main</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">objects=main.o input.o calcu.o</span><br><span class="line">objects_1=main.c input.c calcu.c</span><br><span class="line"><span class="section">main: *.c</span></span><br><span class="line">    gcc -c *.c</span><br><span class="line">    gcc -o main <span class="variable">$(objects)</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">    rm *.o</span><br><span class="line">    rm main</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">CROSS_COMPILE 	?= arm-linux-gnueabihf-		</span><br><span class="line"><span class="comment">#将字符串arm-linux-gnueabihf-赋值给CROSS_COMPILE</span></span><br><span class="line">TARGET		  	?= bsp</span><br><span class="line"></span><br><span class="line">CC 				:= <span class="variable">$(CROSS_COMPILE)</span>gcc		</span><br><span class="line"><span class="comment">#取CROSS_COMPILE的字符串，等效于cc:=arm-linux-gnueabihf-gcc</span></span><br><span class="line">LD				:= <span class="variable">$(CROSS_COMPILE)</span>ld</span><br><span class="line">OBJCOPY 		:= <span class="variable">$(CROSS_COMPILE)</span>objcopy</span><br><span class="line">OBJDUMP 		:= <span class="variable">$(CROSS_COMPILE)</span>objdump</span><br><span class="line"></span><br><span class="line">INCDIRS 		:= imx6ul \					</span><br><span class="line">				   bsp/clk \</span><br><span class="line">				   bsp/led \</span><br><span class="line">				   bsp/delay		</span><br><span class="line"><span class="comment">#	\表示换行 等效于	INCDIRS:=imx6ul bsp/clk bsp/led bsp/delay</span></span><br><span class="line">				   			   </span><br><span class="line">SRCDIRS			:= project \</span><br><span class="line">				   bsp/clk \</span><br><span class="line">				   bsp/led \</span><br><span class="line">				   bsp/delay </span><br><span class="line">				   </span><br><span class="line">				   </span><br><span class="line">INCLUDE			:= <span class="variable">$(<span class="built_in">patsubst</span> %, -I %, <span class="variable">$(INCDIRS)</span>)</span></span><br><span class="line"><span class="comment">#patsubst给各头文件目录的时候需要加上“-I”。</span></span><br><span class="line"><span class="comment">#等效于INCLUDE := -I imx6ul -I bsp/clk -I bsp/led -I bsp/delay</span></span><br><span class="line"></span><br><span class="line">SFILES			:= <span class="variable">$(<span class="built_in">foreach</span> <span class="built_in">dir</span>, <span class="variable">$(SRCDIRS)</span>, $(<span class="built_in">wildcard</span> <span class="variable">$(dir)</span>/*.S)</span>)</span><br><span class="line"><span class="comment">#等效于	SFILES := project/start.S</span></span><br><span class="line">CFILES			:= <span class="variable">$(<span class="built_in">foreach</span> <span class="built_in">dir</span>, <span class="variable">$(SRCDIRS)</span>, $(<span class="built_in">wildcard</span> <span class="variable">$(dir)</span>/*.c)</span>)</span><br><span class="line"></span><br><span class="line">SFILENDIR		:= <span class="variable">$(<span class="built_in">notdir</span>  <span class="variable">$(SFILES)</span>)</span></span><br><span class="line"><span class="comment">#notdir去掉路径		</span></span><br><span class="line"><span class="comment">#等效于	SFILENDIR = start.S</span></span><br><span class="line">CFILENDIR		:= <span class="variable">$(<span class="built_in">notdir</span>  <span class="variable">$(CFILES)</span>)</span></span><br><span class="line"></span><br><span class="line">SOBJS			:= <span class="variable">$(<span class="built_in">patsubst</span> %, obj/%, $(SFILENDIR:.S=.o)</span>)</span><br><span class="line"><span class="comment">#等效于	SOBJS = obj/start.o</span></span><br><span class="line">COBJS			:= <span class="variable">$(<span class="built_in">patsubst</span> %, obj/%, $(CFILENDIR:.c=.o)</span>)</span><br><span class="line"><span class="comment">#等效于	COBJS = obj/main.o obj/bsp_clk.o obj/bsp_led.o obj/bsp_delay.o</span></span><br><span class="line">OBJS			:= <span class="variable">$(SOBJS)</span> <span class="variable">$(COBJS)</span></span><br><span class="line"></span><br><span class="line">VPATH			:= <span class="variable">$(SRCDIRS)</span></span><br><span class="line"><span class="comment"># VPATH 是指定搜索目录的，这里指定的搜素目录就是变量 SRCDIRS 所保存的目录，这样当编译的时候所需的.S 和.c 文件就会在 SRCDIRS 中指定的目录中查找。</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="meta-keyword">.PHONY</span>: clean</span></span><br><span class="line">	</span><br><span class="line"><span class="variable">$(TARGET)</span>.bin : <span class="variable">$(OBJS)</span></span><br><span class="line">	<span class="variable">$(LD)</span> -Timx6ul.lds -o <span class="variable">$(TARGET)</span>.elf <span class="variable">$^</span></span><br><span class="line">	<span class="variable">$(OBJCOPY)</span> -O binary -S <span class="variable">$(TARGET)</span>.elf <span class="variable">$@</span></span><br><span class="line">	<span class="variable">$(OBJDUMP)</span> -D -m arm <span class="variable">$(TARGET)</span>.elf &gt; <span class="variable">$(TARGET)</span>.dis</span><br><span class="line"></span><br><span class="line"><span class="variable">$(SOBJS)</span> : obj/%.o : %.S	<span class="comment">#从$(SOBJS)获取所有的.o文件这些.o文件依赖于.s文件</span></span><br><span class="line">	<span class="variable">$(CC)</span> -Wall -nostdlib -c -O2  <span class="variable">$(INCLUDE)</span> -o <span class="variable">$@</span> <span class="variable">$&lt;</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$(COBJS)</span> : obj/%.o : %.c</span><br><span class="line">	<span class="variable">$(CC)</span> -Wall -nostdlib -c -O2  <span class="variable">$(INCLUDE)</span> -o <span class="variable">$@</span> <span class="variable">$&lt;</span></span><br><span class="line">	</span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">	rm -rf <span class="variable">$(TARGET)</span>.elf <span class="variable">$(TARGET)</span>.dis <span class="variable">$(TARGET)</span>.bin <span class="variable">$(COBJS)</span> <span class="variable">$(SOBJS)</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/01/18/Makefile语法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Source_Insight破解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -524,80 +612,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Python笔记-11.MySQL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/26/Python笔记-11.MySQL/">Python笔记-MySQL</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/26/Python笔记-11.MySQL/" class="archive-article-date">
-  	<time datetime="2019-11-26T06:42:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>MySQL</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/26/Python笔记-11.MySQL/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-Python笔记-12.日期和时间类型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -643,6 +657,80 @@ var _hmt = _hmt || [];
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/11/26/Python笔记-12.日期和时间类型/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Python笔记-11.MySQL" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/26/Python笔记-11.MySQL/">Python笔记-MySQL</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/26/Python笔记-11.MySQL/" class="archive-article-date">
+  	<time datetime="2019-11-26T06:42:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>MySQL</p>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/26/Python笔记-11.MySQL/">展开全文 >></a>
         </p>
       
 
@@ -820,80 +908,6 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Python项目-股票提醒系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/01/Python项目-股票提醒系统/">Python项目-股票提醒系统</a>
-    </h1>
-  
-
-        
-        <a href="/2019/11/01/Python项目-股票提醒系统/" class="archive-article-date">
-  	<time datetime="2019-11-01T11:26:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Python项目-股票提醒系统</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/11/01/Python项目-股票提醒系统/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1012,6 +1026,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
              
@@ -1032,11 +1050,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">博客搭建</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
