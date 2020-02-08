@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/08/27/C++%E7%BC%96%E7%A8%8B%E8%A6%81%E7%82%B9/</loc>
+    
+    <lastmod>2020-02-08T12:56:01.457Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/27/VSCode-windows%E7%BC%96%E8%AF%91C/</loc>
+    
+    <lastmod>2020-01-27T12:19:33.753Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/01/22/C++%E5%A4%8D%E4%B9%A0/</loc>
+    
+    <lastmod>2020-01-23T12:53:17.058Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/01/18/Makefile%E8%AF%AD%E6%B3%95/</loc>
     
     <lastmod>2020-01-20T10:04:16.469Z</lastmod>
