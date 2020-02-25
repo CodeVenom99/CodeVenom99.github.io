@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Code Venom&#39;s Blog">
 <meta property="og:description" content="先查看自己电脑上是否已经有ssh的秘钥，（到C:\Users\admin，其中admin为自己电脑的用户名该文件夹下是否有.ssh文件）如果有，则调到第二步，没有就从第一部开始  ​    在桌面上新建一个文件夹  进入文件夹，右击git bush here 输入,写上自己的邮箱 1ssh-keygen -t rsa  -C &amp;quot;your_email@example.com&amp;quot;">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-25T13:42:22.090Z">
+<meta property="og:updated_time" content="2020-02-25T14:19:36.040Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="避免每次推博客都要输入账号密码">
 <meta name="twitter:description" content="先查看自己电脑上是否已经有ssh的秘钥，（到C:\Users\admin，其中admin为自己电脑的用户名该文件夹下是否有.ssh文件）如果有，则调到第二步，没有就从第一部开始  ​    在桌面上新建一个文件夹  进入文件夹，右击git bush here 输入,写上自己的邮箱 1ssh-keygen -t rsa  -C &amp;quot;your_email@example.com&amp;quot;">
@@ -194,7 +194,16 @@ var _hmt = _hmt || [];
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">比如 git clone git@github.com:HmyBmny/hmybmny.github.io.git</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
-<li>​    将之前存放博客的那个文件夹下的    .deploy_git删除，替换为新下载的这个，大功告成</li>
+<li><p>​    将之前存放博客的那个文件夹下的    .deploy_git删除，替换为新下载的这个</p>
+</li>
+<li><p>​    最后打开存放博客的那个文件夹下的    _config.yml，改为以ssh形式上传，大功告成</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repo: git@github.com:HmyBmny/hmybmny.github.io.git</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</li>
 </ol>
 
       

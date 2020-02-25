@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-02-25T13:42:22.090Z</updated>
+  <updated>2020-02-25T14:19:36.040Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2020/02/25/%E9%81%BF%E5%85%8D%E6%AF%8F%E6%AC%A1%E6%8E%A8%E5%8D%9A%E5%AE%A2%E9%83%BD%E8%A6%81%E8%BE%93%E5%85%A5%E8%B4%A6%E5%8F%B7%E5%AF%86%E7%A0%81/"/>
     <id>http://yoursite.com/2020/02/25/避免每次推博客都要输入账号密码/</id>
     <published>2020-02-25T13:27:28.000Z</published>
-    <updated>2020-02-25T13:42:22.090Z</updated>
+    <updated>2020-02-25T14:19:36.040Z</updated>
     
-    <content type="html"><![CDATA[<p>先查看自己电脑上是否已经有ssh的秘钥，（到C:\Users\admin，其中admin为自己电脑的用户名该文件夹下是否有.ssh文件）如果有，则调到第二步，没有就从第一部开始</p><ol><li>​    在桌面上新建一个文件夹</li></ol><p>进入文件夹，右击git bush here</p><p>输入,写上自己的邮箱</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa  -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p>回车三次</p><p>到C:\Users\admin，其中admin为自己电脑的用户名</p><p>在该文件夹下找到     .ssh</p><p>打开    .pub文件，复制全部的代码</p><p>打开github，登录自己账号，电机右上角头像setting，再选择 SSH and GPG key，添加新的秘钥，将刚才复制的代码全部拷入，保存</p><p>之后再回到桌面的那个文件夹下，右击git bush here,通过 ssh下载博客的仓库，并将其重命名为    .deploy_git</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">比如 git clone git@github.com:HmyBmny/hmybmny.github.io.git</span><br></pre></td></tr></table></figure><ol start="2"><li>​    将之前存放博客的那个文件夹下的    .deploy_git删除，替换为新下载的这个，大功告成</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>先查看自己电脑上是否已经有ssh的秘钥，（到C:\Users\admin，其中admin为自己电脑的用户名该文件夹下是否有.ssh文件）如果有，则调到第二步，没有就从第一部开始</p><ol><li>​    在桌面上新建一个文件夹</li></ol><p>进入文件夹，右击git bush here</p><p>输入,写上自己的邮箱</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa  -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p>回车三次</p><p>到C:\Users\admin，其中admin为自己电脑的用户名</p><p>在该文件夹下找到     .ssh</p><p>打开    .pub文件，复制全部的代码</p><p>打开github，登录自己账号，电机右上角头像setting，再选择 SSH and GPG key，添加新的秘钥，将刚才复制的代码全部拷入，保存</p><p>之后再回到桌面的那个文件夹下，右击git bush here,通过 ssh下载博客的仓库，并将其重命名为    .deploy_git</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">比如 git clone git@github.com:HmyBmny/hmybmny.github.io.git</span><br></pre></td></tr></table></figure><ol start="2"><li><p>​    将之前存放博客的那个文件夹下的    .deploy_git删除，替换为新下载的这个</p></li><li><p>​    最后打开存放博客的那个文件夹下的    _config.yml，改为以ssh形式上传，大功告成</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">repo: git@github.com:HmyBmny/hmybmny.github.io.git</span><br></pre></td></tr></table></figure></li></ol>]]></content>
     
     <summary type="html">
     
