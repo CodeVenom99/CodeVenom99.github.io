@@ -94,20 +94,6 @@
   </entry>
   
   <entry>
-    <title>CodeVenom@DESKTOP-LI13JD8 MINGW64 /d/CodeVenom</title>
-    <link href="http://yoursite.com/2020/02/23/CodeVenom-DESKTOP-LI13JD8-MINGW64-d-CodeVenom/"/>
-    <id>http://yoursite.com/2020/02/23/CodeVenom-DESKTOP-LI13JD8-MINGW64-d-CodeVenom/</id>
-    <published>2020-02-23T08:13:06.000Z</published>
-    <updated>2020-02-23T08:13:06.127Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>ANSYS 14.5安装</title>
     <link href="http://yoursite.com/2020/02/13/ANSYS-14-5%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2020/02/13/ANSYS-14-5安装/</id>
@@ -429,6 +415,26 @@
     <summary type="html">
     
       &lt;p&gt;Python笔记-选择结构&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python笔记-函数与模块</title>
+    <link href="http://yoursite.com/2019/11/01/Python%E7%AC%94%E8%AE%B0-4.%E5%87%BD%E6%95%B0%E4%B8%8E%E6%A8%A1%E5%9D%97/"/>
+    <id>http://yoursite.com/2019/11/01/Python笔记-4.函数与模块/</id>
+    <published>2019-11-01T08:42:57.000Z</published>
+    <updated>2019-12-01T11:52:06.223Z</updated>
+    
+    <content type="html"><![CDATA[<p>Python笔记-函数与模块</p><a id="more"></a><h5 id="初识函数和return语句"><a href="#初识函数和return语句" class="headerlink" title="初识函数和return语句"></a>初识函数和return语句</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(a,b,c,d)</span>:</span></span><br><span class="line">e=a+b+c+d</span><br><span class="line"><span class="keyword">return</span> e</span><br><span class="line">print(<span class="string">"本次结果："</span>,add(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>))</span><br></pre></td></tr></table></figure><h5 id="参数传入"><a href="#参数传入" class="headerlink" title="参数传入"></a>参数传入</h5><h6 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def add(a,b,c=2):</span><br><span class="line">e=a+b+c</span><br><span class="line">return e</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2))</span><br><span class="line">结果：</span><br><span class="line">本次结果：5</span><br><span class="line"></span><br><span class="line">修改默认参数</span><br><span class="line">def add(a,b,c=2):</span><br><span class="line">e=a+b+c</span><br><span class="line">return e</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2,c=4))</span><br><span class="line">结果：</span><br><span class="line">本次结果：7</span><br></pre></td></tr></table></figure><h6 id="参数未知"><a href="#参数未知" class="headerlink" title="参数未知"></a>参数未知</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def add(*args):</span><br><span class="line">print(args)</span><br><span class="line">add(1,2,4,5)</span><br><span class="line">结果：</span><br><span class="line">本次结果：(1,2,4,5)</span><br><span class="line"></span><br><span class="line">def add(*args):</span><br><span class="line">summ=0</span><br><span class="line">for i in args:</span><br><span class="line">summ=summ+i</span><br><span class="line">return summ</span><br><span class="line">print(&quot;本次结果：&quot;,add(1,2,4,5))</span><br><span class="line">结果：</span><br><span class="line">本次结果：12</span><br></pre></td></tr></table></figure><h5 id="模块导入"><a href="#模块导入" class="headerlink" title="模块导入"></a>模块导入</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import 模块名</span><br><span class="line">from 模块名1 import 模块名2</span><br></pre></td></tr></table></figure><p>安装第三方模块</p><p>cmd窗口依次输入</p><p>python -m pip install –upgrade pip#更新pip工具</p><p>pip install 模块名</p><p>pip uninstall 模块名</p><p>pip list #查看所有安装的第三方模块</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python笔记-函数与模块&lt;/p&gt;
     
     </summary>
     
